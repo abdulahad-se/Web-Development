@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Overflow-Property</title>
+    <style>
+        .overflow{
+            width: 40vw;
+            height: 10vh;
+            border: 3px solid black;
+            /* So we use overflow: auto because it is more perferred as when ever your data exceeds the boundry so auto will automatically add scrol bar. and if data didnot exceed then it will not add any scroll bar.*/
+            overflow: auto;
+
+            /* So this is manual way of add scroll bar , but the preferred thing is to use auto. because adding manual scoll bar keepscroll bar visible either the text overflow or not.*/
+            overflow: scroll;
+
+            /* this is used when we want to hide the overflow data. */
+            overflow: hidden;
+
+            /* So overflow-y: scroll add scroll bar on y axis . we can add other things aswell like hidden , visible and auto. so must use auto. */
+            overflow-y: scroll;
+
+            /* So it do same as y but add scroll bar or any other selected property on x axis. */
+            overflow-x: scroll;
+
+            /* So this means that if data is overflow then add scroll bar on x axis and hide data on y axis if it overflow from there aswell. as we know the format of x and y is x axis and y axis so auto comes first so it apply on axis. */
+            overflow: auto hidden;
+
+            /* this is inverse of upper explanation */
+            overflow:hidden auto;
+
+            /* So it basically unwraps the whole text and display it in horizontal order  */
+            white-space: nowrap;
+
+            /* So it is used when text is overflowing and clip means you cannot scroll either or y axis if text is overflow from there and not from  x axis if text is overflow from there. */
+            text-overflow: clip;
+
+            /* Same explanation as above one but it adds .... instead of clipping overflow text.  Note : Using white-space: nowrap or overflow:hidden is necessary for this one. And it is key property in UI as it add .... */
+            text-overflow: ellipsis;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow">
+        <p>This is over flow example , Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla assumenda iure, sed ea vitae harum laborum culpa aperiam est inventore dicta hic modi, enim odio laudantium repudiandae impedit. Repudiandae incidunt suscipit impedit voluptate est eaque minima dicta natus quo! Esse eveniet provident eaque quam voluptatumlorem100.</p>
+    </div>
+</body>
+</html>

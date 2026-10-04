@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-List</title>
+    <style>
+    nav > ul li{
+        /* so basically we used list-style to change mark from disc to urdu. */
+        /* list-style: urdu; */
+        /* so list display=list-item and in list item there is text with mark the text could be any thing mean picture links any thing and mark is in simple words i say dot  , so by default the mark is outside the list-item and when why apply color or background so it will only apply on content not mark so to make it included in list-item we use inside.*/
+        list-style-position: inside;
+        /* So basically to add emoji we use type and then put emoji ( for windows use window key + .)  So basically it used to add customs emojis or to change number etc*/
+        list-style-type: "😒" ;
+        /* so to add image on the place of marker we use list-style-image */
+        list-style-image: url("img.png");
+        /* we can also use disc and img at once but it deosnt mean because either disc of image show at one time. */
+        list-style: disc inside url("img.png");
+
+        /* we use basically the list-style:none it basically removes the mark */
+        list-style:none;
+        color: white;
+        font-size: 1.5em;
+        font-family:cursive;
+        box-shadow: 5px 5px 2px 3px rgb(173, 159, 192);
+        background-color: brown;
+        border: 3px solid aqua;
+        /* width: 50vw; */
+        /* we use this when we want to centre */
+        margin: 7px auto ;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Contact us</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

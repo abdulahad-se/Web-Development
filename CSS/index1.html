@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!--This is internal css-->
+    <!--Here either i have to also use h3 in selecter as h3 is in span which is inline and h3 i block , while if the question came in your mind that why then h1 and h2 in div changing its color without using them in selector is because the div is block element and it take full width although h3 and h2 inside the div didnot have its own background-->
+    <style>
+        div,span ,h3{
+            color: brown;
+            background-color: aqua;
+        }
+    </style>
+    <!--This is external CSS-->
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <!--CSS : CSS stands for Cascading Style Sheets. It is a stylesheet language that is used to describe the visual presentation of a web page written in HTML (Hypertext Markup Language). HTML creates the structure of the page, while CSS adds styling to that structure-->
+    <!--Why use CSS?
+    CSS is essential for creating visually appealing and responsive websites. Here are some key reasons to use CSS:
+    Enhances Visual Appeal: Transforms plain HTML into vibrant,     professional-looking web pages.
+    Improves User Experience: Makes websites intuitive and easy to  navigate.
+    Enables Responsive Design: Adapts layouts for various devices, from mobile phones to desktops.
+    Supports Interactivity: Adds dynamic effects like hover states, transitions, and animations.
+    Promotes Reusability: Allows the same styles to be applied across multiple pages, saving time and effort.-->
+    <!--There are three ways to add CSS
+    External CSS : <link rel="stylesheet" href="style.css"> inside <head> Real projects & best practice. Keeps code organized in a separate .css file.
+    Internal CSS : <style> h1 { color: blue; } </style> inside <head> Single-page sites or testing quick styles without extra files.
+    Inline CSS : <h1 style="color: blue;">Title</h1> directly on tag Quick debugging or dynamic styles via JavaScript. Avoid for regular styling-->
+    <!--Basic Syntax for CSS
+   selector{
+        property : value;
+   }
+   -->
+    <div>
+        <h3>Hey This is my first CSS file</h3>
+    </div>
+    <div>
+        <h2>
+            This second div block
+        </h2>
+    </div>
+    <span>
+        <h3>This is span and i create to check the multiple selectors</h3>
+    </span>
+    
+</body>
+
+</html>

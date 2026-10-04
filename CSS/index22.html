@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Objectfit-ObjectCover</title>
+    <style>
+        .container{
+            border: 2px solid;
+            width: 620px;
+            height: 620px;
+            /* We are setting an image as background */
+            background-image:url("https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80") ;
+
+            /* Here we setting the position to be shown */
+            /* background-position: top right ; */
+
+            /* Here we are centering an image */
+            background-position:center center ;
+
+            /* As we know that image repeat if it is smaller than actual size of screen or width you provided so to pervent the repeatation we use repeat property. */
+            background-repeat:no-repeat ;
+            /*Clip property is used when we want only the selective content to be shown . i.e background-clip: padding-box ;  so here the image shown with padding box and remaining borders will be removed.*/
+            background-clip:content-box ;
+            
+
+
+        }
+        img{
+            border:2px solid black;
+            width: 433px;
+            height: 300px;
+            object-fit: cover;
+            /* This property is used to make space visible , as when we use cover so the image take whole given width due to which the image look strectched and also some part is cut,so to pervent that we use contain which mean that only fit image in such a way that it doesnt effect so if there is any space like upside or downside it will keep them visible. */
+            /* object-fit:contain; */
+
+            /* It just fill the given widht with image without cutting image , although if width is large an image is small so image is strectched to fill that space. */
+            /* object-fit: fill; */
+
+            /* It is default property. */
+            /* object-fit: none; */
+
+            /* It is use to bring down an image  within widht exposing space */
+            /* object-fit: scale-down; */
+
+        /* It is used to set position of image you want to be visible. */
+            /* object-position: top right; */
+            /* object-position: bottom right; */
+            /* object-position: left top; */
+            /* object-position: 10% 20%; */
+            /* object-position: 20px 30px; */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" alt=""> -->
+    </div>
+    
+</body>
+</html>

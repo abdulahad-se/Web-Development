@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Media-Query</title>
+    <!-- Media Query:Media Queries in CSS allow us to change styles depending on screen size. They are the foundation of responsive web design, which ensures your website looks good on desktops, tablets, and mobiles without building separate versions.
+    Syntax
+    @media media-type and (condition) {
+    /* CSS rules */
+    } -->
+    <!-- @media → Starts the query.
+        media-type → The type of output device (commonly screen for devices, print for printing).
+        condition → The rule to check (like max-width: 800px). If true → styles inside apply. -->
+    <style>
+        body{
+            background-color: brown;
+        }
+        /* It means when orientation of screen is landscape apply this css */
+        @media only screen and (orientation: landscape){
+            body{
+                border: 2px solid lightseagreen;
+            }
+        }
+        /* It means when width of screen is 455px apply this css */
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .boxes .box{
+            width: 344px;
+            height: 344px;
+            background-color: white;
+            padding: 3px;
+            margin: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More-On_CSS-Selectors</title>
+    <!-- We already do this selector but here we discuss some more porperties. -->
+    <style>
+        /*It is pseudo class as we know and check if element is first child of it parent. */
+        /* .box:first-child{
+            color: brown;
+        }*/
+
+        /* It is universal selector as we know it target whole elements in file when we only use * but here we use class so it only applies on the elements of that class only. */
+        /* .boxes *{
+            background-color: bisque;
+            border: 2px solid;
+            margin:13px;
+        } */
+
+        /* It is also an psuedo class and as we use number before like nth-child(2) means second child of parent but here we use even and odd mean the child on even and odd positions will be targeted. */
+        /* .box:nth-child(even){
+            background-color: red;
+        } */
+        /* .box:nth-child(odd){
+            background-color: yellow;
+        } */
+
+        /* It is pseudo elements and it targets the first line only */
+        /* .box::first-line{
+            color: purple;
+        }  */
+
+        /* It is an attribute selector */
+         /* [data-color="primary"]{
+            background-color: red;
+         }
+
+         /* It is group selector */
+         /* a,.box,[data-color="primary"]{
+            border: 2px solid;
+            padding: 5px;
+            margin-top: 5px;
+         } */ 
+
+        /* It is pseudo class and it target the first element from last */
+          /* a:nth-last-child(1){
+            background-color: aqua;
+          } */
+
+        /* It is pseudo element and as we use content so it put content before the inner content of this class  */
+        /* .boxes::before{
+            content: "😍";
+        } */
+
+        /* It is pseudo element and as we use content so it put content after the inner content of this class  */
+        /* .boxes::after{
+            content:"hi";
+            border: 2px solid red;
+        } */
+
+
+        /* Only for particular elements. It is activate when we try to select the text or anything. */
+        /* .boxes::selection{
+            color: yellow;
+            background-color: black;
+        } */
+        /* It apply on all elements in html file and it activates when we select the text or any other thing in html file. */
+        /* ::selection{
+            color: aqua;
+            background-color: rgb(19, 64, 108);
+        } */
+        /* It targets all the first letter in box classes */
+        /* .box::first-letter{
+            color: brown;
+        } */
+
+        input::placeholder{
+            color: blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">I am second box</div>
+        <div class="box">I am third box</div>
+        <a href="#">Testing</a>
+    </div>
+    <input type="text" placeholder="Hi this form Css testing.">
+
+    <span>
+        <p>Testing</p>
+    </span>
+    
+</body>
+</html>

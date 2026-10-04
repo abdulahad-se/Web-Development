@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Sizing-Units</title>
+    <!-- 
+    /* ==========================================================================
+   CSS SIZING UNITS & HEIGHT BOUNDARIES (COMPLETE CHEAT SHEET)
+   ========================================================================== */
+
+/* 
+ 1. px (Pixels) - ABSOLUTE UNIT
+    - Fixed unit (1px = 1 screen pixel).
+    - Does NOT scale with screen size or user browser settings.
+    - WHEN TO USE: Thin borders (1px-3px), sharp box shadows, fixed dividers.
+    - WHEN TO AVOID: Main typography, padding, margins (causes responsiveness issues).
+*/
+
+/* 
+ 2. rem (Root EM) - RELATIVE TO HTML ROOT
+    - Dependent directly on the <html> tag font size (Default: 1rem = 16px).
+    - Calculation: [rem value] * [root font-size] (e.g., 2rem = 2 * 16px = 32px).
+    - Predictable & consistent across the entire web page.
+    - WHEN TO USE: Primary typography (headings, paragraphs), site-wide margins & padding.
+    - WHEN TO AVOID: Component internal scaling where parent-child proportion matters.
+*/
+
+/* 
+ 3. em (Element EM) - RELATIVE TO PARENT / ELEMENT
+    - Dependent on the parent element's font-size (or the element's own font-size).
+    - Multiplies down nested structures (Compound scaling effect).
+    - Calculation: [em value] * [parent font-size] (e.g., Parent 20px -> 1.5em = 30px).
+    - WHEN TO USE: Buttons, icons, and self-contained badges that must scale proportionally with text.
+    - WHEN TO AVOID: Global body text and deep layout structures (to prevent compounding math).
+*/
+
+/* 
+ 4. vw (Viewport Width) - RELATIVE TO SCREEN WIDTH
+    - Dependent on 1% of the browser's viewport/screen width (1vw = 1% of screen width).
+    - Automatically expands and shrinks as the user resizes the browser window.
+    - WHEN TO USE: Full-width hero sections, banners, large fluid headlines.
+    - WHEN TO AVOID: Small body text, standard button padding, or micro-elements.
+*/
+
+/* 
+ 5. vh (Viewport Height) - RELATIVE TO SCREEN HEIGHT
+    - Dependent on 1% of the browser's viewport/screen height (1vh = 1% of screen height).
+    - Scales based on vertical screen space.
+    - WHEN TO USE: Full-screen hero sections (height: 100vh), full-height sidebars, or modal overlays.
+    - WHEN TO AVOID: General body content (can cause text overlap on short screens).
+*/
+
+/* 
+ 6. % (Percentage) - RELATIVE TO DIRECT PARENT
+    - Dependent on the direct parent container's size (width/height).
+    - Calculation: Takes specified percentage of the parent's current dimensions.
+    - WHEN TO USE: Responsive layout columns, flexible card widths (e.g., width: 50%), and image scaling.
+    - WHEN TO AVOID: Standalone typography or elements without a fixed parent height.
+*/
+
+/* 
+ 7. vmin (Viewport Minimum) - RELATIVE TO SMALLER SCREEN DIMENSION
+    - Equal to 1% of the viewport's SMALLER dimension (width vs height).
+    - Mobile Portrait: Scales with Width | Desktop Landscape: Scales with Height.
+    - WHEN TO USE: Square boxes, popups/modals, text that must never overflow the screen.
+    - WHEN TO AVOID: Standard page layout columns.
+    Best for: Non-overflowing square cards, modals, & profile boxes.
+    - Example: width: 50vmin; height: 50vmin;
+*/
+
+/* 
+ 8. vmax (Viewport Maximum) - RELATIVE TO LARGER SCREEN DIMENSION
+    - Equal to 1% of the viewport's LARGER dimension (width vs height).
+    - Mobile Portrait: Scales with Height | Desktop Landscape: Scales with Width.
+    - WHEN TO USE: Large hero text, full-screen background graphics, giant headlines.
+    - WHEN TO AVOID: Fine typography, small layout spacing.
+    Best for: Catchy hero titles, big banners, & background graphics.
+    - Example: font-size: 5vmax;
+*/
+
+/* ==========================================================================
+   HEIGHT BOUNDARIES (MIN-HEIGHT & MAX-HEIGHT)
+   ========================================================================== */
+
+/* 
+ 9. min-height - STARTING FLOOR LIMIT
+    - Sets a minimum height boundary. Box will NOT shrink below this, but can grow endlessly.
+    - WHEN TO USE: Responsive cards, section blocks, hero wrappers (prevents collapse when content is small).
+*/
+
+/* 
+ 10. max-height - CEILING LIMIT
+    - Sets a maximum height limit. Box will NOT grow larger than this, regardless of content.
+    - WHEN TO USE: Scrollable dropdown menus, chat boxes, popups/modals (pairs with overflow-y: auto).
+*/
+
+/* ==========================================================================
+   DISPLAY TYPE BEHAVIOR & RULES:
+   - Sizing (width / height): Works on BLOCK / INLINE-BLOCK. IGNORED on INLINE.
+   - Typography (font-size): Works on BOTH Block and Inline elements.
+   - Spacing (margin / padding): All 4 sides for BLOCK. Horizontal ONLY for INLINE.
+   ========================================================================== */
+
+/* ==========================================================================
+   INDUSTRY BEST PRACTICE SUMMARY:
+   1. REM        -> Default for 80%+ of work (Text, Margins, Padding, Layouts).
+   2. PX         -> Only for Borders (1px-3px) and hard dividers.
+   3. EM         -> Only for Button/Badge padding and proportional icons.
+   4. VW/VH      -> Only for Full-screen Hero banners and layout boundaries.
+   5. %          -> Only for dynamic multi-column layouts & image containers.
+   6. VMIN/VMAX  -> Rare (Browser games, artwork, non-overflowing popups).
+   7. MIN/MAX H  -> Min-height for card stability; Max-height for scrollable overlays.
+   ========================================================================== */
+    -->
+   <style>
+    html{
+        /* default is 16 px for example agar me isko 30 px kardo ga to overall text ka size 30 px hogai ga lekin jo div ya koi bhi element rem istemal kare ga uska font size 60 ka = hogai ga. */
+        font-size: 16px;
+    }
+    .one{
+        /* width: 638px; */
+        background-color: coral;
+    }
+    div.one > p{
+         border: 5px solid seagreen;
+        /* vw has nothing to do with its parent , % does for example 80% take 80% percent width of it parent width */
+        width: 100vw;
+        box-sizing: border-box;   
+    }
+    .two{
+        /* border: 5px solid blue; */
+        box-sizing: border-box;
+        font-size: 2rem;
+        width: 100vw;
+        /* background-color: brown; */
+    }
+    .two > p {
+        
+        /* font-size: 2em; */
+        border: 5px solid black;
+        box-sizing: border-box;
+        /* width: 20%; */
+        text-overflow: ellipsis;
+        overflow: hidden;
+        background-color: blue;
+        /* min-height: 80vh; */
+        max-height: 30vh;
+    }
+    .third{
+        font-size: 5vmax;
+    }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Practicing CSS siziing Units</h1>
+    </header>
+    <main>
+        <div class="one">
+            <p>This is container one</p>
+        </div>
+        <div class="two">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsa labore aut voluptates? Architecto illum tenetur debitis, blanditiis qui asperiores consequuntur saepe doloremque quasi illo nobis nihil minima molestiae beatae, aliquam tempore soluta vitae ipsum iste necessitatibus.</p>
+        </div>
+        <div class="three">his is container 2
+            <p>This is container 3</p>
+        </div>
+
+    </main>
+    <footer>
+        <p>These css sizing units are suggested by harry and gemini</p>
+    </footer>
+</body>
+</html>

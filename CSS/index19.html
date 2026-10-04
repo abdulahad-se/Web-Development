@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Transform</title>
+    <!-- The CSS transform property allows you to visually manipulate an element in 2D      space. Using transforms, you can move, rotate, resize, or skew elements without    disturbing the normal document flow.
+        Because it’s 2D, transformations are applied only in the X (horizontal) and Y (vertical) dimensions.
+        Syntax:
+        transform: function(values); -->
+    <style>
+        .container{
+            border: 2px solid red ;
+            height: 70vh;
+            width: 80vw;
+        }
+        .box{
+            border: 2px solid black;
+            height: 70px;
+            width: 70px;
+            /* This property rotates the content of the division either anticlockwise or clockwise according to the degree of rotation. The values are taken in degrees, and adding a negative sign makes the rotation anticlockwise.
+            Syntax:
+            transform: rotate(angle);
+            Positive values → clockwise.
+            Negative values → counterclockwise. */
+            /* transform: rotate(25deg); */
+            /* transform: rotate(0.25turn); */
+            /* transform: rotateX( 45deg ); */
+            /* transform:rotateY(60deg); */
+            /* transform: rotateZ(30deg); */
+            /* transform: rotate3d(300deg); */
+            /* The scale() function resizes the element in proportion to its original dimensions.
+            Syntax:
+            transform: scale(x, y);
+            x → scaling factor for width.
+            y → scaling factor for height.
+            Note: If only one value is given (e.g., scale(1.5)), both width & height scale equally. */
+            /* transform: scale(2); */
+            /* transform:scaleX(8); */
+            /* transform: scaleY(5); */
+            /* transform: scaleZ(8); */
+            /* transform: scale3d(1,3,1); */
+
+            /* This property helps in adding a slant or skew to a division. (Skew: A pair of lines neither intersecting nor parallel)
+            Syntax:
+            transform: skew(x-angle, y-angle);
+            skewX(angle) → skew only horizontally.
+            skewY(angle) → skew only vertically. */
+            /* transform: skew(34deg); */
+            /* transform: skewX(23deg); */
+            /* transform: skewy(34deg); */
+
+
+            /* The translate() function moves (shifts) an element along the X-axis, Y-axis, or both.
+            Syntax:
+            transform: translate(x, y);
+            x → horizontal shift (positive = right, negative = left).
+            y → vertical shift (positive = down, negative = up). */
+            /* transform: translate(30%); */
+            /* transform: translateX(45%); */
+            /* transform: translateY(56%); */
+            /* transform: translateZ(90%); */
+            /* transform: translate3d(80% , 50px , -20px); */
+
+
+            /* Using Multiple Tranform properties:You can chain multiple transformations together.
+            transform: translate(30px, 20px) rotate(20deg) scale(1.2);
+            This would move → rotate → scale the element in sequence. */
+            /* transform: translateY(100%) skew(45deg) translateX(180%); */
+
+
+            /* transform: matrix(1,0,0,1,50,100);*/
+            /* Its syntax is:matrix(a,b,c,d,tx,ty) 
+            a=horizontal scale, b=vertical skew, c=horizontal skew , vertical scale, tx=translation x ty=translation y*/
+
+            /* transform-origin changes the pivot point around which an element is transformed (scaled, rotated, or skewed).
+            By default, every CSS transform happens relative to the exact center (50% 50%) of the element. transform-origin lets you move that anchor point.
+            Syntax
+            transform-origin: x-axis y-axis z-axis; */
+            /* transform-origin: 30px 0px; */
+            /* transform: rotate(34deg); */
+            /* Keywords:Single-keywords(top,bottom,left,right) Two-keyword-Combination(top left | bottom right | top right | bottom left | center)  and try to use percentage like , 0% 100% , 50% 50% according to you need. 
+            You can also Mix keywords like (center 80%)*/
+            /* transform-origin: right; */
+            /* transform-origin: top right; */
+            /* transform-origin: 50% 50%; */
+            /* transform-origin: center 50%; */
+            /* transform: rotate(300deg); */
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+    
+</body>
+</html>

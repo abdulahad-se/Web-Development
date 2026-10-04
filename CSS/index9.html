@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Shadows-Outline</title>
+    <!-- Shadows:When styling websites, adding depth and focus to elements helps improve the design and user experience. CSS provides two powerful tools for this: shadows (box-shadow, text-shadow) and outlines. -->
+     <!-- 1. Box Shadows
+    box-shadow is a popular CSS property that enables designers to add shadow effects around an element's frame. It can be used to give any element, be it a div, image, or button, a 3D feel or to emphasize on hover. Syntax:
+    box-shadow: h-offset v-offset blur spread color inset;
+    h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+    blur: The larger the value, the blurrier the shadow.
+    spread: Expands or shrinks the shadow size.
+    color: Defines the shadow color.
+    inset: Makes the shadow inner. -->
+    <style>
+        .Box-element{
+            border: 5px solid black;
+            /* width: 80vh; */
+            /* margin: auto; */
+            margin: 20px;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+            box-shadow:  -1px -3px 7px 2px  rgb(10, 134, 134) inset;
+            box-sizing: border-box;
+            
+
+        }
+        .input-box {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.3);
+      box-sizing: border-box; 
+    }
+    /* Text-shadow:text-shadow is utilized to give shadows specifically to the text. It can elevate the readability of the text or give it an elegant appearance.
+    Syntax:
+    text-shadow: h-offset v-offset blur color;   */
+        .text-element{
+            text-shadow: 3px 10px 7px rgb(57, 2, 57) ;
+            ;
+        }
+        /* Outline:An outline is a line that is drawn around elements, outside the borders, to make the element "stand out". It's commonly used for accessibility purposes, like highlighting focused elements.
+        Syntax:
+        outline: width style color;
+        width: Sets the outline width.
+        style: Determines the style of the outline such as solid, dotted, or dashed.
+        color: Sets the outline color. */
+        .outline{
+            border: 5px solid red;
+            padding: 2px;
+            box-sizing: border-box;
+            outline: 5px solid blue;
+            /* The outline is placed 5px away from the element’s border. */
+            outline-offset: 5px;
+            
+        }
+        .button:focus{
+            box-shadow: 5px 5px 4px 2px color red
+            ;
+            outline: 2px solid blue
+        }
+        /* 4. Key Differences: Outline vs Border
+            While both can visually appear similar, outlines differ from borders in a few ways:
+
+            Feature	Border	Outline
+            Position	Takes up space inside layout	Drawn outside, doesn’t affect layout
+            Offset	No offset property	outline-offset can push it outward
+            Width control	Can vary on each side	Always uniform on all sides
+            Rounded corners	Works with border-radius	No rounded corners (usually) */
+    </style>
+</head>
+<body>
+    <div class="Box-element">
+        <p>Hey this is shadow overview</p>
+    </div>
+    <div class="text-element">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorem numquam nisi maxime magni provident odit esse tenetur animi laborum voluptates optio, fugiat magnam hic pariatur asperiores soluta sed deleniti, blanditiis quisquam aspernatur impedit adipisci! Consequuntur sunt impedit optio exercitationem non ullam praesentium necessitatibus eaque!</p>
+    </div>
+    <input type="text" class="input-box" placeholder="Inset shadow input">
+    <div class="outline">
+        <p>This is outline example</p>
+    </div>
+    &nbsp;
+    <div>
+    <button class="button">tap the button</button>
+    </div>
+    
+</body>
+</html>

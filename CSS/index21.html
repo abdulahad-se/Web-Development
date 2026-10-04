@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Animations</title>
+    <style>
+        .container{
+            background-color: aqua;
+            width: 50vw;
+            height: 60vh;
+        }
+        .box{
+            width: 5vw;
+            height: 6vh;
+            background-color:brown;
+            /* Assigns the keyframe animation. */
+            /* animation-name: MyAnimation;
+
+            /* Time taken for one cycle (e.g., 2s, 500ms). */
+            /* animation-duration: 2s; */
+
+            /* Number of loops (1, 3, infinite). */
+            /* animation-iteration-count: 4; */
+
+            /* Time before animation starts (can be negative). */
+            /* animation-delay: 1s;  */
+
+            /* Direction (normal, reverse, alternate, alternate-reverse). */
+            /* animation-direction: reversed; */
+
+            
+            /* Speed curve (ease, linear, ease-in, ease-out, ease-in-out). */
+            /* animation-timing-function: linear; */
+            
+            /* How element looks before/after animation (none, forwards, backwards, both). */
+            /* animation-fill-mode: forwards; */
+
+            /* It is the playstate of animation mean how you want you animation to be i.e paused running etc */
+            /* animation-play-state: paused; */
+
+            /* Shorthand way to write animation: 
+            animation: name duration timing-function delay  iteration-count direction fill-mode :Noy necessary to write all the properties only write those you want.*/
+            
+            /* Applying multiple animations by using
+            animation	Shorthand property to combine all of the above.*/
+            /* animation: MyAnimation 3s ease-in-out 1s infinite reverse forwards; */
+
+            animation: MyAnimation 3s ease-in-out 1s 4 ,
+                        SecondAnimation 6s ease-in-out 1.2s infinite  ;
+           
+        }
+        @keyframes MyAnimation {
+            from{
+                background-color: red;
+            }
+            to{
+                transform: translate(1000px);
+            }
+        }
+        /* so here we make another animation but instead of using from and to we  use percent mean at 10% apply this animation .....etc. */
+        @keyframes SecondAnimation {
+            10%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform:rotate(150deg);
+            }
+            40%{
+                transform: rotate(200deg);
+            }
+            60%{
+                transform: rotate(250deg);
+            }
+            80%{
+                transform:rotate(300deg) ;
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

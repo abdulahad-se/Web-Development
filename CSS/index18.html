@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid-1</title>
+    <!-- Grid:CSS Grid Layout is a two-dimensional layout system that allows you to create complex web designs using both rows and columns. Unlike Flexbox, which is one-dimensional (either row or column), Grid lets you work in both dimensions simultaneously.
+    To use Grid, simply set display: grid; (or display: inline-grid; for inline grids) on a container. The child elements within this container become grid items, and you control their placement using various grid properties.
+    CSS Grid is ideal for two-dimensional layouts where both rows and columns matter. It's perfect for structuring entire web pages, such as creating a header, footer, sidebar, and main content. -->
+    <style>
+        /* Grid Container Properties:These properties apply to the parent element (the grid container) that holds all grid items. The container defines the structure of the layout */
+        .container{
+            border: 2px solid yellow;
+            display: grid;
+            height: 80vh;
+            /* so we use justify content and align-content when our grid or item is less and size of container is huge either horizontally then we use jsutfiy-content and if height is huge then we use align-content to adjust the positions. 
+            and we use justify-item and align-items when we want to do exactly same thing within cell. */
+
+            /* justify-content: center;
+            align-content: center; */
+
+            /* 1. grid-template-columns & grid-template-rows
+                These properties define the number of columns and rows in the grid, along with their sizes.
+                grid-template-columns controls the columns.
+                grid-template-rows controls the rows.
+                You can use different units like px, em, %, fr (fractional unit), or auto to define the size. 
+                NOTE: If we declare one thing either row or column other will be automatically declared. */
+
+                /* grid-template-columns: 120px 100px; */
+
+                /* grid-template-rows: 100px 100px 100px ; */
+
+            /*  We can also add name to grid e.g */
+            /*  grid-template-columns: [first]120px [second] 100px; */
+
+            /* it is fr units: mean fraction of actual widht or height. */
+            /* grid-template-columns: 1fr 2fr 1fr ; */
+
+            /* so for example we need enough columns or rows so we can use repeat. */
+            grid-template-columns: repeat(4 , 1fr);
+         
+
+            /* we can also use minmax : it mean that the minimum width of column is 100px and max is 1fr */
+            /* grid-template-columns: repeat(4,minmax(100px,1fr)); */
+
+            /* The gap property adds spacing between grid items. It can also be defined individually as row-gap (spacing between rows) and column-gap (spacing between columns). */
+
+            /* gap: 10px; */
+            /* row-gap: 10px;
+            column-gap: 20px;
+
+            /* 
+            It is used when we have to adjust the items within container in their own grid cells at a time instead of targetting individual ones.
+            justify-items:center;
+            align-items:end; */
+        }
+
+
+        /* Grid Item Properties
+            These properties apply to individual grid items, allowing you to control their placement and size within the grid. */
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        .item-1{
+            /* 1. grid-column
+                Defines how many columns a grid item should span. You can specify a start and end position.
+                grid-column: start / end; /* Start and end are the grid line numbers 
+                You can also use the span keyword to specify how many columns the item should span:
+                grid-column: span 2; /* Item will span across 2 columns */ 
+
+            /* grid-row: 1/2;
+            grid-column: 1/2; */
+        }
+        .item-4{
+            /*
+            2. grid-row
+                Defines how many rows an item should span. Similar to grid-column, it can be set using start and end, or the span keyword.
+                grid-row: start / end;  Start and end are grid line numbers 
+                grid-row: span 2; Item will span across 2 rows  
+             grid-row: 1/2; 
+             */
+            
+            /*
+            or you can do this aswell 
+            grid-row-start: 1;
+            grid-row-end: 2; 
+            */
+            
+            /* 
+            grid-column: 1/2; 
+            or you can do this
+            grid-column-start: 4; 
+             grid-column-end: ; 
+            */
+
+
+
+            /* 
+            So the properties like align-self justify-self is applying individually on particular item within its cell. 
+            3. align-self and justify-self
+                These properties apply to individual grid items and allow you to align and justify them within their respective grid cells.
+                align-self: Controls the vertical alignment of a grid item within its grid cell (i.e., how far it is from the top or bottom of the cell).
+                justify-self: Controls the horizontal alignment of a grid item within its grid cell (i.e., how far it is from the left or right of the cell).
+             align-self: start; 
+             justify-self:start;
+             */
+             align-self: ;
+
+            
+        }
+        /* so here it the item 1 and 4 overlapped bcz they both are on same position. */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item ">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Variables</title>
+    <!-- Variables:CSS Variables (also called custom properties) let you store values (like colors, font sizes, margins) in one place and reuse them throughout your stylesheet. This makes your code cleaner, easier to maintain, and more consistent.
+    Instead of repeating the same color or size everywhere, you can define a variable once and use it multiple times.
+    Syntax
+    :root {
+    --variable-name: value;
+    } -->
+    <!-- :root → defines global variables available across the page.
+    --variable-name → variable name (always starts with --).
+    var(--variable-name) → used to access the variable. -->
+    <!-- Quick Recap:
+    Define variables with --name inside :root.
+    Use them with var(--name).
+    Can override inside elements for flexibility.
+    Great for colors, spacing, fonts, themes, etc. -->
+    <style>
+        :root{
+            --color: rgb(19, 163, 210);
+            --seccolor:rgb(193, 235, 249);
+            --padding:23px;
+            --border:2px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            /* background-color: rgb(19, 163, 210); */
+            background-color: var(--color);
+        }
+        .nav ul li{
+            /* padding: 23px; */
+            padding: var(--padding);
+            /* border: 2px solid white; */
+            border: var(--border) solid white;
+            margin: 23px;  
+        }
+       .nav ul li:first-child{
+        /* We override the variable locally. */
+            --color:red;
+            /* background-color: aliceblue; */
+            background-color:var(--color);
+        }   
+        ul:first-child{
+
+        }
+        .container{
+            
+            /* padding-top: 23px; */
+            padding-top:var(--padding);
+            /* background-color: lightblue; */
+            background-color: var(--seccolor);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat error. Delectus consectetur quisquam aliquam eius corporis praesentium nostrum veniam nihil adipisci cupiditate! Magni quisquam quo iusto aperiam, consectetur sed!</p>
+    </div>
+    
+</body>
+</html>

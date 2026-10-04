@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid-2</title>
+    <style>
+        .container{
+            border: 2px solid yellow;
+            display: grid;
+            /* 3. grid-template-areas (previous properties are in index18.html file)
+                grid-template-areas allows you to visually define the structure of your grid by naming different areas. This approach is useful for creating layout grids like those found in websites with distinct sections (header, sidebar, footer, etc.). */
+            grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer footer";
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+        .item-1{
+            grid-area: nav;
+        }
+        .item-2{
+         grid-area: side;   
+        }
+        .item-3{
+            grid-area: article;
+        }
+        .item-4{
+         grid-area: footer;
+        }
+        .item-5{
+            /* So here as item-4 and item-5 have same grid-area so they both overlapped. */
+            grid-area:footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2 ">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        
+    </div>
+    
+</body>
+</html>

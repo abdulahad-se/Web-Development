@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style>
+        /* agar hm chahte hai kah ham apni marzi ka fonts use kare to ham google fonts ka bhi use karte hai, waha se ap apni marzi ka font use kar sakte ho, usko use karna ka liya hm ya to link , ya phir import kare ge agar import kare ge to isko style tag ka andar import karde ge , lekin agar ap chahte hai kah ek se ziada fonts ap use kare means 3 10 etc practice yahi hai kah ap unko google fonts se ek sath imprt karle agar apna google fonts use karne hai to.*/
+        @import url('https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Caacupe+One&display=swap');
+        h1{
+            /* ye hamne google se imprt kiya font use karte hai */
+        
+                font-family: "Betania Patmos", cursive;
+                font-weight: 400;
+                 font-style: normal;
+
+
+            /* jb bhi hamne kisi element ka font change karna hu to ham font family use karte hai , ab yaha pr multiple fonts nazar araha hoga to basically siwai fist font yani (Franklin Gothic Medium) ka sare remaining fonts ko ham fallback fonts kehte hai ya tab kam ata hai jb main font kam nhi karta, or bhi hai check karlena */
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+            /* ya fonts style hai jiska nam se hi pata chal raha hai kah ya fonts ko style karna ka lia use hota hai, or according to harry is ko usually italic karna ka lia use kiya jata hai , or bhi functionalties hai check kar lena */
+            /* font-style: italic; */
+            /* agar hm font usually bold karna chahte hai to ham is ka use ka karte hai */
+            /* font-weight: 500;ye basically value hai kah kitna bold karna hai */
+            /* or agar underline karna hai to usually hm text-decoration use karte hai
+            is ka or bhi functionalties hai check kar lena jese ke overline etc */
+            /* text-decoration: underline; */
+        }
+        p{
+            /* opacity: Used to adjust element transparency, ranging from 0 (completely invisible) to 1 (fully visible). */
+            opacity: 0.5;
+            /* Fonts Size : Ya basically font ka size ka lia use hota hai , jb ham isko khole ga to hame ya large small , xl ye dekhai ga lekin according to harry px yani pixels use karne ziada sai hai */
+            font-size: 40px;
+            /* line heigth basically gap ka liya use hota hai between two line kah hame ek line or dosre line ka darmiyan kitna gap chahiya mean 1 line ka 2 line etc */
+            line-height: 2;
+            /* letter spacing ya basically use hota hai kah apna letters ka darmiyan me kitna space rakhna hai */
+            /* letter-spacing: 25px; */
+            font-family: "Caacupe One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+        }
+        h2{
+            /* ye basically text positioning ka liya use hota hai */
+            text-align: center;
+            /* text transoform basically text ko capatilize lower case etc karne ka liya use hota hai or functionaluity check karne ka liya hover karna lena text- tranform ko */
+            text-transform: lowercase;
+            text-decoration: underline;
+            /* underline ka color change karede ga or bhi use case hota */
+            text-decoration-color: aquamarine;
+            /* line ko change karde ga dotted, wavy etc */
+            text-decoration-style: dotted;
+            /* ye thickness ki value ka liya hai */
+            text-decoration-thickness: 7px;
+        }
+        .lorem{
+            border: solid red;
+            width: 50px;
+            /* to basically jb data apka overflow horaha hu to apna kiya karna hai matlab jb border ki limit se exceed karde jai to kya karna hai for example clip ya elpsis dotted line or bhi hota hai etc,or hidden ka matlab hai jo data overflow howa hai usko hide kardo */
+            text-overflow: clip;
+            overflow: hidden;
+            /* word break agar ap chahte ho kah apka word break hojai to apye use karsakte hu */
+            word-break: break-all;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>About fonts</h2>
+        <p>this is fonts</p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsum esse eaque itaque suscipit reiciendis voluptate perferendis maxime vel quis beatae doloremque asperiores architecto natus, accusantium obcaecati ut quos perspiciatis!</p>
+    </div>
+</body>
+</html>

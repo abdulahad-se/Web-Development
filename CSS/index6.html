@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifity-Cascading Algorithm</title>
+    <!-- Cascading Algorithm:CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the above CSS will be purple.
+    Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages. -->
+
+    <!-- Specifity:Specificity  
+        CSS specificity determines which style rules get applied to an element when there are conflicts. Higher specificity means the style will be used. It's calculated based on styles, IDs, classes, and tag names -->
+
+    <!-- Position and order of appearance: the order in which your CSS rules appear  .
+        Specificity: an algorithm that determines which CSS selector has the strongest match. 
+        Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS . 
+        Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type. -->
+
+        <!-- If there are two rules that have selectors of identical specificity, the last one to be declared won. In an HTML page, you can add styles in different ways: through a <link> tag at the top of your page and another at the bottom, the styles from the bottom one will be used. The same applies down on the page take priority.  
+        An inline style attribute with CSS declared in it will override all other CSS, regardless of its position, unless a declaration has !important defined. -->
+
+        
+        <!-- Specifity Calculation: Inline:1000, Id:100 , Class Selector,Attribute or psuedo Classes:10 , Element Selector and Psuedo Elements:1, Universal Selector:0
+         Then add up the all parts of selectors used -->
+         <style>
+            /* So from all of this we know that .cpurple will apply , the reason is that element selector come after class and we also know that as class comes first than element and if for example there is no element selector but only class than the class applied at last will be applied, more over if the inline is used that all selector is ignored or you can say override and inline css will apply. 
+            Now if we talk about how to calculate the specificity so just add the values of selector, and if some selectors like complex one for example div > p so div and p both value of 1 so the ans is 2, if this value exceeds the limit of other selectors then it will applied 
+            try to go form bottom to up as it is easy to override then. and try not to use inline as it can only be override using !important and if i ask why there is a need to go so specific just keep your website simple and creative. Always try to use classes so you can reuse it.*/
+            h1{
+                background-color: aqua;
+            }
+            .cyellow{
+                background-color: yellow;
+            }
+            .cred{
+                background-color: red;
+            }
+            .cpurple{
+                background-color: purple;
+            }
+            /* Quick Quizz : Calculate the specifity of this 
+             a=1+.harryclass=10+.rohanclass=10+[href]=10+:hover=10  =41*/
+            a.harryclass.rohanclass[href]:hover{
+                color: chartreuse;
+            }
+         </style>
+</head>
+<body>
+    &lt;p&gt; Order of Specificity:Inline Css&nbsp; &gt;&nbsp;Id Selector &nbsp;&gt;&nbsp;Class or Attribute Selector&nbsp;&gt;&nbsp;&nbsp;Element Selector&nbsp;&gt;&nbsp;&nbsp;Universal Selector &lt;\p&gt;
+
+    <p class="cred cyellow cpurple">Hi This testing</p>
+
+    
+    <a class="harryclass rohanclass" href="https://www,google.com">Gooogle</a>
+
+    
+</body>
+</html>

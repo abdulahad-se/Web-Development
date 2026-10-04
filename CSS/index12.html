@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-Position-Property</title>
+    <!-- Position:Positioning is one of the most powerful features in CSS because it lets you create layouts, fixed headers, sticky navigation bars, tooltips, modals, and much more. -->
+    <!-- Static:By default, all elements have position: static;. They follow the normal document flow without any special positioning.It mean properties like top bottom left right z-index doesnot apply on it. -->
+
+    <!-- Relative:Elements are positioned relative to the normal position in the document.
+        You can use the top, right, bottom, and left properties to move the element from its original position. So to make changes in postion you have to change position from default static to relative or any other property. -->
+
+    <!--Absolute:Elements are positioned relative to the closest positioned         ancestor  (parent), which means we need to have a parent element with  a positioning other than 'static'.
+    Note: An absolutely positioned element is removed from the normal flow.  -->
+
+    <!-- Fixed:An element with position: fixed; is positioned relative to the viewport (the screen itself). It does not move when the page is scrolled.
+    This is useful for creating elements like fixed headers or footers. -->
+
+    <!-- Sticky:Position sticky is a hybrid between 'relative' and 'fixed'.
+    It allows an element to become "stuck" to the top or bottom of its container when scrolling, but it behaves like relative positioning within the container until it reaches a specified offset. -->
+
+    <!-- Z-index:When there are multiple overlapping elements, the z-index helps in deciding the order of their visibility. The element having the highest value of z-index is shown first, followed by the other elements.
+
+    Syntax
+
+    selector {
+    position: relative | absolute | fixed | sticky;
+    z-index: value;
+    }
+    z-index value can be:
+
+    Positive integer (e.g., 1, 10, 100) → Higher numbers appear above lower ones.
+    Negative integer (e.g., -1) → Pushes the element behind others.
+    Auto (default) → Follows the natural stacking order.
+    Note: The z-index property only works on positioned elements (relative, absolute, fixed, sticky). -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 80vw;
+            height: 133px;
+            margin: 5px;
+            padding: 9px;
+        }
+
+        .box1 {
+            /* So the definition is written above but there is one best example to understand , So as i apply position:absolute so what will happen it look up to its ancestor mean starting from parent so it ask from parent that are you position( mean anyother property except static ) so parent say No until you apply it , so after that it will go to body that are you position it say no , and same for head at last it go to html lang="en" and ask are you positioned it say no but you can apply relative to me. because html is root element. It only look up for more ancestors when parent is  positioned except static.*/
+            position: absolute;
+            top: 0px;
+
+            /* position: sticky;
+            top: 0px;
+            height: 50px;
+            width:85% ;
+            margin: 0;
+            padding: 0; */
+            background-color: red
+  
+                
+        }
+
+        .box2 {
+            /* we apply relative in box 2 so we can adjust it from top , bottom , left , right , z index. */
+            
+             /* position: relative; 
+            top: 45px; 
+            left: 45px;
+            background-color: azure;  */
+        }
+
+        .box3 {
+            background-color: beige;
+            /* position: fixed;
+            bottom:30px;
+            left: 13vh;
+            height: 15vh; */
+        }
+
+        .box4 {
+            background-color: aqua;
+        }
+
+        .parent {
+            border: 2px solid purple;
+            padding: 7px;
+            width: 90vw;
+            margin: 30px;
+            height: 75vh;
+            /* position: absolute; */
+            /* transform , filter , perspective can also make an element appear as positioned. So for example i didnot use position absolute , position , sticky , fixed or relative. but i used one of the properties from tranform , filter , perspective so the the element get applied relative to it parent still because as we discuss that these properties also act as positioned in simple words make an element positioned. */
+            
+             /* transform: translate(0); */
+             /* filter: invert(0); */
+            /* perspective: 0em;   */
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+
+</body>
+
+</html>

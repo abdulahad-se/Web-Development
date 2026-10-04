@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Flex</title>
+    <!-- Flex:Flexbox (Flexible Box Layout) is a modern CSS layout module that makes it easier to design flexible and responsive layouts. It provides powerful alignment, spacing, and ordering features without relying on floats or positioning hacks.
+    To start using Flexbox, you need to set the container’s display to flex:
+    .container {
+    display: flex;
+    }
+    The container becomes a flex container.
+    Its child elements are called flex items 
+    Flexbox is more suited for one-dimensional layouts, where you only need to control alignment in a single row or column.-->
+    <!--            Flex Container Properties            -->
+
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+            display: flex;
+            /* Defines the direction of the flex items inside the container Values:
+            row → Left to right (default).
+            row-reverse → Right to left.
+            column → Top to bottom.
+            column-reverse → Bottom to top.*/
+
+            /* flex-direction:column; */
+
+            
+            /* Aligns items along the main axis (horizontal if row, vertical if column).
+               justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; */
+
+            /* justify-content:center; */
+
+
+            /* Aligns items along the cross axis.
+                align-items: flex-start | flex-end | center | stretch | baseline;
+                NOTE : It is used when we have content of one line */
+
+            align-items:center;
+
+
+            /*Controls whether items should wrap to the next line when space runs out. */
+
+            flex-wrap: wrap;
+
+
+            /* It wraps the text in reverse order */
+            
+            /* flex-wrap: wrap-reverse; */
+
+            /*Aligns multiple lines of flex items (when wrapped).
+                align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+                NOTE : It is used when the content is more than one line */
+
+            /* align-content: flex-start; */
+
+            /* By looking its syntax we  figure out that the row indicates direction and wrap  indicates wrap property , it simple warp the flowing content in  row direction.  */
+            flex-flow: row wrap;
+
+            /* This simple add the gap between the content/items */
+            /* gap:10px ; */
+            /* We can also apply gap on selective direction using directionName-gap:; */
+            /* row-gap: 10px;
+            column-gap: 20px; */
+            /* so we have also shorthand to apply both. using gap:row column*/
+            gap: 10px 30px;
+
+            /* NOTE:Most of the people write these properties in item and items properties in container which is wrong items have their own properties.The properties use in conatiner it is for container */
+        }
+        .items{
+            
+            flex-shrink:2;
+            height: 23px;
+            width: 23px;
+            border: 2px solid darkorchid;
+            /* margin: 8px; */
+            padding:7px;
+        }
+        /* These are the order properties. By default its vlaue is 0. Higher the order the more away it lie. Mean if the item has higher order than others so  it will lie at last. depending on others item order aswell.
+        Defines the order of items inside the container. Default is 0.*/
+         /* .order-1{
+            order: 1
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        } */
+        .item1{
+            /* Defines how items expand or shrink to fill available space.
+            flex-grow: 1; → Item expands to fill space.
+            flex-shrink: 1; → Item shrinks if needed. */
+
+            /* flex-grow: 2; */
+
+            flex-shrink: 2;
+        }
+        .item2{
+            /* Overrides align-items for individual items.
+            align-self: auto | flex-start | flex-end | center | baseline | stretch; */
+            align-self: flex-start;
+        }
+        /* NOTE : The items properties work on individual item but can be work on all items at once aswell. */
+       
+
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="items order-1 item1">1</div>
+            <div class="items order-2 item2">2</div>
+            <div class="items order-3">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items">7</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <!-- <div class="items"></div> -->
+            <!-- <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">So on</div>
+            <div class="items">So on</div>
+            <div class="items">So on</div>
+            
+            <div class="items">So on</div> -->
+            
+        </div>
+    </main>
+    
+</body>
+</html>

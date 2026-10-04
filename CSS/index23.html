@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Filters</title>
+    <style>
+        img{
+            width: 430px;
+            margin-bottom: 30px;
+            /* filter:blur(10px); */
+        }
+        .img1{
+            /* This filter is used to set brightness of image or video. */
+            /* filter: brightness(150%); */
+
+            /* It is used to set the grayscale mean blacknwhite color. */
+            /* filter:grayscale(100%); */
+
+            /* This is also an filter */
+            /* filter: sepia(80%); */
+
+            /* It is used to set the saturation of image */
+            /* filter: saturate(230%); */
+
+            /* It is used to invert the image. */
+            /* filter: invert(70%); */
+
+            /* It is used to set the transparency of image. */
+            filter:opacity() ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1QVGH3_GHo3d4Pb5nvp5ryGl_odm9itNcK-iig8vdEN9ni1L6A1D822k&s=10" alt="">
+
+        <img class="img2" src="https://resizing.flixster.com/WrQSJ5JRLxg2NiLbjoio_paVmCY=/fit-in/705x460/v2/http://media.baselineresearch.com/images/596511/596511_full.jpg" alt="">
+       </div>
+</body>
+</html>

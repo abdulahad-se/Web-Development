@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Float-&-Clear</title>
+    <!-- Float:The float property in CSS is used to position an element to the left or right of its container, allowing other content (like text or inline elements) to wrap around it. This property is commonly used with images, sidebars, or layouts where text should flow beside a block element.
+    Think of it as the “wrap text” feature in MS Word — when you insert an image, you can let the text flow beside it instead of keeping the image on its own line.
+    Syntax
+    float: none | left | right | inherit;
+    none → Default value. The element will not float.
+    left → The element floats to the left side of its container.
+    right → The element floats to the right side of its container.
+    inherit → Inherits the float property from its parent element. -->
+    <!-- Clearing Floats
+    Sometimes floated elements affect the layout of the following elements. To fix this, we use the clear property.
+
+    p {
+    clear: both;  /* No element is allowed to float beside this paragraph */
+    }
+    Quick Recap
+    float lets elements move left or right inside their container.
+    It allows text wrapping, similar to MS Word’s wrap-through option.
+    Commonly used for images, sidebars, and layouts.
+    Always remember to use clear to prevent layout issues -->
+    <style>
+        .image img{
+            border: 7px solid ;
+            border-color: lightblue;
+            border-radius: 24px ;
+            float:inline-end;
+            display: flow-root;
+            
+        }
+         .divs{
+            border: 2px solid;
+            padding: 2px;
+            margin: 3px;
+        }
+        .divs:nth-child(3){
+            clear: both;
+            background-color: brown;
+            color: wheat;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="image">
+      <img src="img.png" alt="Aeroplane" height="230">
+    </div>
+    <div class="divs">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio fugiat vero iste quas quis nulla cupiditate assumenda, deleniti tempora esse accusantium modi.
+    </div>
+    <div class="divs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab similique totam perspiciatis obcaecati, magni architecto dicta suscipit blanditiis ipsa dolor, officiis voluptate, ex quasi illum? Commodi explicabo necessitatibus ducimus earum modi, odit quia iure! Quaerat tempore dolorum doloremque a corrupti asperiores distinctio alias? Eligendi, alias fuga eum a cumque dolorem laborum quisquam necessitatibus voluptates iure quasi ab ex quia? Repellendus praesentium nesciunt velit quaerat optio, non ut fugiat sed, provident exercitationem quam tempore, pariatur expedita ullam reiciendis. Numquam nam eligendi debitis nihil laboriosam sed dignissimos voluptatem aperiam voluptates voluptate at, consequuntur dolores, iure in aspernatur. Cupiditate mollitia ipsam obcaecati ut!</div>
+    <div class="divs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, rerum aliquid nesciunt odio quis quisquam facere deleniti ipsa iste harum cupiditate sint, impedit nobis odit modi laborum porro quos suscipit sed animi maiores soluta! Minus dolores quos totam earum fugiat non at veritatis commodi vitae.</div>
+    
+</body>
+</html>

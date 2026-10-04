@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Display-Properties</title>
+    <style>
+    /* So basically What is display properties: If i tell you in easy words  so basically it an method which is use to change display properties of different types of elements . for example : Inline and Block */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+        .Box{
+            border: 3px solid red;
+            /* display: inline; */
+            /* now for example if i add margin and padding: So in short it will not work from top and bottom for an inline element. as inline only takes spaces as much as needed. So if i want to adjust margin and padding so i have to change the property of display from inline to inline-block , so it can now behave has both inline and block , and now i can add margin padding.*/
+            display: inline-block;
+            margin: 35px;
+            padding: 25px;
+        }
+        .box1{
+            border: 3px solid blue;
+            /* Display none is a property to remove the particular box and text written under the selected selector .What will in actual it do. So basically when we use display none for box1 class that is related to class Box because they both are the class of same div so when we use display none the box and text are removed and the space they occupy also remove.  */
+            display: none;
+            /* Visibility: hidden is property which is used to make particular text or box invisble and keeping its space unlike display none that remove the space. */
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Box box1">
+        I am div 1.
+    </div>
+
+    <div class="Box">
+        I am div 2
+    </div>
+    <span>
+        I am Span.
+    </span>
+
+    
+</body>
+</html>
