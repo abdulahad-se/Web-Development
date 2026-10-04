@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design-Layout</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgb(85, 5, 85);
+            position: sticky;
+            top: 0px;
+            z-index:1000;
+            
+        }
+        nav ul li{
+            display: inline-block;
+            border: 2px solid;
+            padding: 9px;
+            margin: 23px 12px ;
+            border: none;
+        }
+        nav ul li:nth-child(1){
+            margin-left: -6px;
+            /* margin-right:7px; */ 
+        }
+        nav ul li:nth-child(2){
+            margin-left: -11px;
+            margin-right: 81px; 
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+
+        }
+        nav ul li a:hover{
+            color: fuchsia;
+        }
+        ::selection{
+            background-color: brown;
+            color: whitesmoke;
+        }
+        .parent .child1 {
+            display: inline-block;
+            border: 2px solid;
+            padding: 98px;
+            margin: 20px;
+            padding: 125px;
+            padding-bottom: 300px;
+            background-color:lightpink ;
+        }
+        .parent .child2{
+            display: inline-block;
+            border: 2px solid;
+            padding: 98px;
+            margin: 20px;
+            padding: 125px;
+            padding-bottom: 300px;
+            background-color:lightblue;
+        }
+        .parent{
+            display: inline-block;
+            border: 2px solid;
+            margin: 19px;  
+            padding-bottom: 10vh;
+            background-color: green;
+        }
+        .image img{
+            border-radius: 244px;
+            position: fixed;
+            right: 1vw;
+            z-index: 1000;
+        }
+         .heading{
+            display: inline-block;
+            border: 2px solid;
+            border-radius: 24px;
+            text-align: center;
+            padding: 40px;
+            margin-left: 82px;
+            margin-top: 210px;
+            background-color: blue;
+            color: white;
+        }
+        .bottom{
+            border: 2px solid;
+            padding: 10px;
+            margin-top: 300px;
+            background-color: white;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="head">
+            <ul>
+                <li><a href="#">abdulahad-se</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="parent">
+            <div class="child1">
+
+            </div>
+            <div class="child2">
+
+            </div>
+        </div>
+        <div class="image">
+            <img src="img.png" alt="Aeroplane" width="50">
+        </div>
+
+    </main>
+    <footer>
+        <div>
+       <h2 class="heading">Welcome to this CSS Exercise Layout</h2>
+       </div>
+       <div class="bottom"></div>
+    </footer>
+</body>
+</html>

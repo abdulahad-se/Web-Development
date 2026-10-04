@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Navbar using Flex</title>
+   <style>
+    .logo img{
+        width: 160px;
+    }
+
+    nav{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        
+    }
+    nav ul{
+        display: flex;
+        gap: 30px;
+    }
+    nav ul li{
+        list-style: none;
+        
+    }
+    nav ul li a {
+        text-decoration: none;
+        align-content: end;
+        color: grey;
+    }
+   </style>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="logo.png" alt="logo" ></div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#">Products <img src="img.svg" alt="" width="14"></a></li>
+                        <li><a href="#">Pricing <img src="img.svg" alt="" width="14"></a></li>
+                        <li><a href="#">Resources <img src="img.svg" alt="" width="14"></a></li>
+                        <li><a href="#">About Us <img src="img.svg" alt="" width="14"></a></li>
+                        <li><img src="logo2.png" alt="logo2" width="40"></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+   
+</body>
+
+</html>

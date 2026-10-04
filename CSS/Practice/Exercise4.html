@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design-A-Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --color-primarybg:;
+            --color-bg:rgb(11, 74, 95);
+            --font-color:yellow;
+            
+        }
+        body{
+            background-color:rgb(49, 47, 47);
+        }
+        nav{
+            background-color:var(--color-bg);
+            height: 60px;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            
+        }
+        nav ul li{
+            display: inline-block;
+            padding: 5px ;
+            margin: 10px ;
+            border: none;
+        }
+        ul li a{
+            color: var(--font-color);
+            text-decoration: none;
+        }
+        nav ul li:nth-child(2){
+            padding-right: 100px;
+            /* ye hamne elements ko middle me lana ka lia kiya hai */
+        }
+        ul li a:hover{
+            color: grey;  
+        }
+        .head:hover{
+            color: yellow;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <nav class="head">
+        <ul>
+            <li><a href="/">abdulahad-se</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </nav>
+    
+    
+</body>
+</html>

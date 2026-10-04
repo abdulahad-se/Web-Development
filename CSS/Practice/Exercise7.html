@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desgin Grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* width: 100vw;
+            height: 90vh; */
+            max-width: 70vw;
+            text-align: center;
+            margin: auto;
+            grid-template-columns: repeat(6,minmax(60px,1fr));
+            grid-template-rows: repeat(8,minmax(60px,1fr));
+            gap: 2vw 4vw;
+        }
+        .items{
+            background-color: #f8f9fa;
+            border-radius: 7px;
+        }
+        
+        .items:hover{
+            transition: all 0.2s ease;
+            transform: scale(89%);
+            box-shadow: 5px 5px 2px 2px grey;
+        }
+        a{
+           border: 1px solid;
+           font-size: 60%;
+           text-decoration: none;
+           
+       }
+       .blue:hover{
+        transition: all 0.2s ease;
+        transform: translate(-3px);
+        box-shadow: 0px 5px 0px 1px rgb(5, 63, 83);
+       }
+       .green:hover{
+        transition: all 0.2s ease;
+        transform: translate(-3px);
+        box-shadow: 5px 5px 0px 1px rgb(8, 102, 8);
+       }
+       .blue {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #00a8cc;
+            color: white;
+            border-radius: 7px;
+        }
+        .green{
+            border: 1px solid;
+            padding: 5px 0px 5px ;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 7px;
+        }
+        .item1{
+            grid-column: span 2;
+            grid-row: span 2;
+            width: 24vw; 
+        }
+        .item1 span{
+            display: block;
+           margin-top:53px;
+        }
+        
+        .item2{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        
+        }
+        .item2 p{
+          color: grey;
+        }
+        .item3{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+            
+        }
+        .item3 p{
+            color: gray;
+        }
+        .item4{
+       
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+           
+        }
+        .item4 p{
+            color: grey;
+        }
+        .item5{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        }
+        .item5 p{
+            color: grey;
+        }
+        .item6{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        }
+        .item6 p{
+            color: grey;
+        }
+        .item7{
+          
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+          
+        }
+        .item7 p{
+            color: grey;
+        }
+        .item8{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        }
+        .item8 p{
+            color: grey;
+        }
+        .item9{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        }
+        .item9 p{
+            color: grey;
+        }
+        .item10{
+            grid-row: span 2;
+            grid-column: span 2;
+            width: 24vw;
+        }
+        .item10 p{
+            color: grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+    <div class="container">
+        <div class="item1 items">
+            <h3>English</h3>
+            <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item2 items">
+            <h3>Deutsch</h3>
+            <p>German</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item3 items">
+            <h3>Italiano</h3>
+            <p>Italian</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item4 items">
+            <h3>Español</h3>
+            <p>Spanish</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item5 items">
+            <h3>français</h3>
+            <p>French</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item6 items">
+            <h3>Português brasileiro</h3>
+            <p>Brazilian Porteguese</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item7 items">
+            <h3>日本</h3>
+            <p>Japanese</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item8 items">
+            <h3>한국어</h3>
+            <p>Korean</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item9 items">
+            <h3>中国</h3>
+            <p>Chinese</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+        <div class="item10 items">
+            <h3>中國</h3>
+            <p>Traditional Chinese</p>
+             <span>
+                <a class="blue" href="#">Download 64-bit</a>
+                <a class="green" href="#">Download 34-bit</a>
+            </span>
+        </div>
+
+    </div>
+    </main>
+</body>
+</html>
