@@ -1,0 +1,338 @@
+1-What is CSS?( sourcefile: index1.html)
+
+2-Types of CSS:( sourcefile=index2.html)
+    -Internal 
+    -External,
+    -Inline.
+
+3-Selectors.(sourcefile: index3.html)
+    .Types of Selectors:
+        -Element Selector,
+        -Class Selector,
+        -Id Selector,
+        -Child Selector,
+        -Universal Selector,
+        -Pseudo  Class Selector,
+        e.g :hover , :active , :visited etc.
+        -Psuedo Element Selector,
+        e.g ::before, ::after etc.
+        -Attribute Selector,
+        -Group Selector 
+         and manymore.
+
+4-CSS Box Model:(sourcefile: index4.html)
+    -Content,
+    -Padding,
+    -Border,
+    -Border radius,
+    -Margin,
+    -heigth,
+    -width,
+    -box-sizing=border-box.
+
+5-Fonts:(sourcefile: index5.html)
+    -font-family
+    -font-size
+    -font-weigth
+    -font-style
+    -text-decoration
+    -text-decoration-color
+    -text-decoration-style
+    -text-decoration-thickness
+    -text-align
+    -opacitiy
+    -text-tranform
+    -text-overflow
+        -over:hidden
+    -word-break
+    -line-heigth
+    -letter-spacing.
+
+(vi)-Colors(sourcefile: icolors.html)
+    -hex color code
+    -rgb
+    -rgba
+    -hsl and hsla
+
+6-Css Specifity and Cascading Algorithm.(sourcefile: index6.html)
+
+7-Css Sizing Units.(sourcefile: index7.html)
+    -rem
+    -em
+    -vmin
+    -vmax
+    -min-heigth
+    -max-height
+    -vh(viewport height)
+    -vw(viewport width)
+    -px(pixel)
+    -%(percentage).
+
+8-Css Display Properties.(sourcefile: index8.html)
+    -display:block;
+    -display:inline;
+    -display:inline-block;
+    -display:none;
+    -visibility:hidden;
+    -(flex and grid is below under flex and grid section).
+
+9-Css Shadows and Outlines.(sourcefile: inde9.html)
+    -box-shadow
+    -text-shadow
+    -outline
+    -outline-offset
+    -Difference between Outline and Borders.
+
+10-Css List.(sourcefile: index10.html).
+    -list-style:urdu
+    -list-style-position:inside/outside
+    -list-style-type:
+    -list-style-image:url()
+    -list-style:disc inside url()
+    -list-style:none.
+
+11-Css Overflow Property.(sourcefile: index11.html).
+    -overflow:scroll
+    -overflow:hidden
+    -overflow:auto
+    -overflow-y:auto/hidden/scroll(any one at a time)
+    -overflow-x:auto/hidden/scroll(any one at a time)
+    -white-space: nowrap
+    -overflow:auto hidden
+    -overflow:hidden auto
+    -text-overflow:clip
+    -text-overflow:elipsis.
+
+12-Css Position Property.(sourcefile:index12.html).
+    -position:static.(it is by default),
+    -position:relative,
+    -position:absolute,
+    -position:sticky,
+    -position:fixed,
+    -z-index.
+
+13-Css Variables.(sourcefile:index13.html).
+    -root(global),
+    -localvariable(overrides the global variable).
+
+14-Css Media Query.(sourcefile:index14.html).
+    -@media only screen and (orientation: landscape),
+    -@media only screen and (max-width: 455px).
+
+15-Css Float & Clear.(sourcefile:index15.html).
+    -float:(right/left/inherit/inline-start/inline-end),
+    -clear:(right/left/both/none),
+    -display:flow-root.
+
+16-More on Css Selectors.(sourcefile:index16.html).
+    -first-Child
+    -Using Universal Selector with an Element
+    -:nth-child(even)
+    -:nth-child(odd)
+    -:nth-last-child(1)
+    -::first-line
+    -Attribute Selector
+    -Group Selector
+    -::before
+    -::after
+    -element::selection
+    -::selection
+    -::first-letter
+    -::placeholder.
+
+17-Css Flex.(sourcefile:index17.html).
+    -Flex Container Properties
+    ------------------------------------------
+        -display:flex;
+        ----------------------------------
+        -flex-direction:;
+            -row,
+            -column,
+            -row-reverse,
+            -column-reverse.
+        ------------------------------------------
+        -justify-content:center | space-around | space-between | flex-start | flex-end | space-evenly.
+        ------------------------------------------------------------------------------------------------
+        -align-items:center | flex-start | flex-end | baseline;
+        --------------------------------------------------------------
+        -flex-wrap:wrap/nowrap(default)/wrap-reverse;
+        ------------------------------------------------------
+        -align-content:center | flex-start | flex-end | space-around | space-between | stretch;
+        ---------------------------------------------------------------------------------------
+        -flex-flow: row wrap | column wrap;
+        ----------------------------------------------------------------------------------------------
+        -gap
+            -gap:e.g 10px;
+            -row-gap: e.g 20px;
+            -column: e.g 30px;
+            -gap:rowgap columngap;
+        ------------------------------------------------
+
+    -Flex Items Properties.
+    ------------------------------------------------
+        -flex-shrink:;
+        -----------------------------
+        -order:;
+        ----------------------
+        -flex-grow:;
+        --------------------------------
+        - align-self: auto | flex-start | flex-end | center | baseline | stretch; 
+
+18-Css Grid.(sourcefile: index18.html and index18part2.html).
+    -Grid Container Properties.
+    --------------------------------------------------------------------------
+        -justify-content:;
+        ----------------------------------------------------------------
+        -align-content:;
+        -----------------------------------------------------------
+        -grid-tempelate-columns: e.g 100px 120px;
+        ---------------------------------------------------------
+        -grid-tempelate-rows: e.g 120px 210px;
+        -------------------------------------------------------
+        -Naming Grid Lines:
+            -grid-tempelate-columns: e.g [first]90px [second]130px;
+            -grid-tempelate-rows: e.g [one]80px [two]140px;
+        ---------------------------------------------------------------
+        -Grid tempelate Area:
+            -e.g : grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer footer";
+            -e.g ( how i use in items):
+                .item-1{
+                    grid-area:nav;
+                }
+        ------------------------------------------------------------------------
+        -fr units:
+            -grid-tempelate-columns:1fr 1fr 1fr;
+            -grid-tempelate-rows:1fr 2fr 1fr;
+        ---------------------------------------------------------------------
+        -repeat:
+            -grid-tempelate-columns:repeat(4 , 1fr);
+            -grid-tempelate-rows:repeat(3,1fr);
+        -------------------------------------------------------------
+        -minmax:
+            -grid-tempelate-columns:repeat(4 ,minmax(120px,1fr));
+            -grid-tempelate-rows:repeat(3 , minmax(100px,1fr));
+        --------------------------------------------------------------------
+        -gap:
+            gap: e.g 20px;
+            -row-gap: e.g 40px;
+            -column-gap: e.g 30px;
+        -justify-items:center | start | end | left | right | flex-start | flex-end etc;
+        -align-items:center | start | end | stretch | baseline | flex-start | flex-end etc;
+        -------------------------------------------------------------------------------
+
+    Grid Items Properties.
+    -------------------------------------
+        -grid-column: e.g 1/2;
+        -grid-column-start: e.g 1;
+        -grid-column-end: e.g 2;
+        -grid-column: span 2;
+        ----------------------------------------
+        -grid-row: e.g 1/3;
+        -grid-row-start: e.g 1;
+        -grid-row-end: e.g 3;
+        -grid-row:span 3;
+        -----------------------------------------------
+        -justify-self:center etc;
+        -align-self:center etc;
+
+20.Css tranform.(sourcefile:index19.html).
+    -tranform:rotate();
+    -tranform:rotateX();
+    -tranform:rotateY();
+    -tranform:rotateZ();
+    -tranform:rotate3d();
+
+    -tranform:scale();
+    -tranform:scaleX();
+    -tranform:scaleY();
+    -tranform:scaleZ();
+    -tranform:scale3d();
+
+    -transform:skew();
+    -tranform:skewX();
+    -tranform:skewY();
+
+    -tranform:translate();
+    -tranform:translateX();
+    -tranform:translateY();
+    -tranform:translateZ();
+    -tranform:translate3d();
+
+    -Using Multiple transform Properties:
+        -Syntax:
+            tranform:property1 property2 ...... propertyn.
+            (transform:translate(230px) skew(30deg) rotate(0.2turn))
+    -tranform:matrix();
+    -transform-origin:e.g 50% 50%;
+    -tranform-origin:e.g center 40%;
+    tranform:rotate(300deg);
+
+20.Css transition.(sourcefile:index20.html).
+    -transition-property: ;
+    -transition-duration: ;
+    -transition-timing-function: ;
+    -transition-delay: ;
+
+    -Shorthand Way:
+        transition: property duration timing-function delay;
+
+21.Css Animations.(sourcefile:index21.html).
+    -Assinging Anmations:
+    e.g : @keyframe MyAnimation{
+        from{
+            background-color:red;
+        }
+        to{
+            background-color:white
+        }
+    }
+
+    @keyframe SecondWayTodoAnimations{
+        20%{
+            transform:translate(230px);
+        }
+        30%{
+            transform:translate(300px);
+        }
+    }
+
+    -animation-name: ;
+    -animation-duration: ;
+    -animation-timing-function: ;
+    -animation-delay: ;
+    -animation-iteration-count: ;
+    -animation-direction: ;
+    -animation-fillmode: ;
+    -animation-playstate: ;
+
+    -ShorthandWayToDeclareAnimation:
+        animation: name duration timing-function delay iteration-count direction fillmode;
+
+22.Css Objectfit-ObjectCover.(sourcefile:index22.html).
+    -Object-fit:cover;
+    -object-fit:contain;
+    -object-fit:none;
+    -object-fit:fill;
+    -object-fit:scaledown;
+
+    -object-position:top right;
+    -object-position:20% 30%;
+    -object-position:20px 80px;
+
+    -background-image:url();
+    -background-repeat:no-repeat;
+    -background-clip:Padding-box;
+    -background-position:center center;
+
+23.Css Filter.(sourcefile:index23.html).
+    -filter:blur();
+    -filter:saturation();
+    -filter:hue-rotate();
+    -filter:grayscale();
+    -filter:opacitiy();
+    -filter:sepia();
+    -filter:brightness();
+    -filter:invert();
+
