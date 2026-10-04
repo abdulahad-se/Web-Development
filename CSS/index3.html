@@ -1,109 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selector</title>
     <style>
-        /* Element Selector 
-        A CSS selector is the exact target pointing to an HTML element so you can style it , is ka kuch drawbacks bhi hai jese kah ek ka ham ne ek div ka backgriund change kiya to jitne bhi div hoga file ka andar un sb ka background change hojai ga , or agar ham chahte hi nhi hai kah us div ka background color bhi change ho to ham obviously kis or tarha kaselector ko istemal kare ga. for example me kehta hu jaha class red ho sirf unhi ka color change ho.*/
-        div{
+        /* Element Selector
+        A CSS selector is the exact target pointing to an HTML element so you can style it. It has some drawbacks; for example, if we change the background color of one div, all divs in the file will also have their background color changed. If we don't want other divs to change, we must use another selector instead. For example, targeting only elements where class is red. */
+        div {
             /* background-color: red; */
         }
-        /* Class Selector :Class Selector
-            Targets all HTML elements that have a specific class attribute (prefixed with .).
-            Syntax: .card { color: red; } */
-            /* .red mean class is red */
-        .red{
+
+        /* Class Selector :class Selector
+        Targets all HTML elements that have a specific class attribute (prefixed with .).
+        Syntax: .card { color: red; } */
+        /* .red means class is red */
+        .red {
             background-color: red;
         }
-        /* Id Selector :D Selector
-            Targets a single, unique HTML element on the page with a specific id attribute (prefixed with #).
-            Syntax: #header { color: red; }*/
-        /* #green means id is green*/
-        #green{
-            background-color: green;
 
+        /* Id Selector :ID Selector
+        Targets a single, unique HTML element on the page with a specific id attribute (prefixed with #).
+        Syntax: #header { color: red; } */
+        /* #green means id is green */
+        #green {
+            background-color: green;
         }
+
         /* Child Selector :Child Selector
-            Targets only elements that are immediate (direct) children of a specified parent element (using >).
-            Syntax: div > p { color: red; } (targets only <p> directly inside <div>)*/
-        /* So here p is child of div means paragraph is inside div element and it mean change the color of font and background both of paragraph inside div element, or for example agar div ka andar koi or element e.g article hai or paragraph us ka andar  hai then ye property apply nhi hogi 
-        is selector ka matlab hai kah agar div ka andar directly howa yani direct child howa then apply hoga , agar hm chahte hai kah apply ho lazmi yani kah bhale paragraph kisi or ak andar hi kyu na ho div ka to hm phir descendent selector istemal karte hai*/
-        div > p{
+        Targets only elements that are immediate (direct) children of a specified parent element (using >).
+        Syntax: div > p { color: red; } (targets only <p> directly inside <div>) */
+        /* So here p is a child of div, meaning the paragraph is inside the div element. This changes both font color and background of paragraphs inside div elements. For example, if there is another element inside div (like article) and paragraph is inside that article, this property will not apply.
+        This selector applies only if p is a direct child of div. If we want it to apply regardless of nesting depth, we use the descendant selector instead. */
+        div>p {
             color: blue;
             background-color: azure;
         }
-        /* Descendent Selector:Descendant Selector
-        Targets all elements nested anywhere inside a specified ancestor element, regardless of how deep they are (using a space).
-        Syntax: div p { color: red; } (targets all <p> inside <div>, including inside nested tags) */
-        /* ham yaha pr ye karaha hai kah div ka andar p hu jis ka bhi through ho lekin majood ho bs */
-        div p{
+
+        /* Descendant Selector :Descendant Selector
+    Targets all elements nested anywhere inside a specified ancestor element, regardless of how deep they are (using a space).
+    Syntax: div p { color: red; } (targets all <p> inside <div>, including inside nested tags) */
+        /* What we are doing here is targeting any p inside div, no matter how deeply nested it is, as long as it exists */
+        div p {
             color: blueviolet;
             background-color: burlywood;
         }
+
         /* Universal Selector :Universal Selector
-            Targets every single element on the web page using an asterisk (*).
-            Syntax: * { margin: 0; }*/
-        /* is ka matlab hai me sare elements ko ma margin or padding 0 dena chahta hu ( ek dafa is ka baghair dekhna preview ma to by default space hoti hai lekin jb hai ya apply kare ge to wo upper ki side pr attach hojai gai) */
-        *{
+    Targets every single element on the web page using an asterisk (*).
+    Syntax: * { margin: 0; } */
+        /* This means I want to set margin and padding to 0 for all elements (if you check the preview without this, there is default spacing, but when this is applied, elements align to the top/edges) */
+        * {
             margin: 0;
             padding: 0;
         }
+
         /* Pseudo Selector :Pseudo-Selector
-            Targets an element based on a specific state or condition (pseudo-classes using :) or styles a specific part of an element (pseudo-elements using ::).
+    Targets an element based on a specific state or condition (pseudo-classes using :) or styles a specific part of an element (pseudo-elements using ::).
 
-            Syntax: a:hover { color: red; } (styles links only when hovered)*/
-        /* agar me chahta hu kah link visit hona ka bat us ka color change ho or meri marzi ka color ai to ma pseudo selector ka use karo ga.
+    Syntax: a:hover { color: red; } (styles links only when hovered)*/
+        /* If I want to change the color of a link after it has been visited to a custom color, I will use pseudo-selectors */
 
-        Pro Tip for Link States: Remember the order rule LVHA (Lord Vader Has Arrived): :link $\rightarrow$ :visited $\rightarrow$ :hover $\rightarrow$ :active. If you put :hover before :link, the hover effect will fail to trigger.*/
-        a:visited{
+        /* Pro Tip for Link States: Remember the order rule LVHA (Lord Vader Has Arrived): :link -> :visited -> :hover -> :active. If you put :hover before :link, the hover effect will fail to trigger. */
+        a:visited {
             color: yellow;
         }
-        /* agar me chahte hu kah jo bhi link dalo uska color blue ya koi or ho to ma pseudo use karo ga */
-        a:link{
+
+        /* If I want any link I add to have a specific color like blue or custom RGB, I will use pseudo-selectors */
+        a:link {
             color: rgb(37, 37, 39);
         }
-        /* agar ma chahta ho kah jb ma kisi bhi link ka uper hover karo or us ka color meri marzi ka change ho to me pseudo selector use karo ga */
-        a:hover{
+
+        /* If I want the link color to change to a custom color when I hover over it, I will use pseudo-selectors */
+        a:hover {
             color: brown;
         }
-        /* agar me chahte hu kah jb me link ko click karo or click ka time pe meri marzi ka color ai to me active ka use karta hu , or agar me chahte hu ka link red na ho lekin backgrouond to simple background add kardo ga */
-        a:active{
+
+        /* If I want a custom color to appear when I click on the link at the exact moment of clicking, I use :active (or add a simple background if needed) */
+        a:active {
             color: red;
         }
-        /* ye bhi ek pseudo selector hai is ka basically ya matlab hai, kah jaha jaha p apne parent ka first child hai uska background color chocolate kardo */
-        p:first-child{
+
+        /* This is also a pseudo-selector. It basically means: set the background color to chocolate wherever p is the first child of its parent element */
+        p:first-child {
             background-color: chocolate;
         }
-        /* ham ::after bhi use kar sakte hai agar chahe bs you shape ya koi or cheez aga insert karde ga */
-        /* ::before - Inserts an icon before the link text without touching HTML */ 
+
+        /* We can also use ::after if we want; it simply inserts a shape, icon, or content ahead/after */
+        /* ::before - Inserts an icon before the link text without touching HTML */
         .btn::before {
-        content: "👉 ";
+            content: "👉 ";
         }
-        /* :focus – Styles inputs or buttons when clicked or selected via keyboard (crucial for form fields and web accessibility). 
-        Focus (:focus): Triggers when an element receives input or key selection (input:focus { outline: 2px solid blue; }).*/
+
+        /* :focus - Styles inputs or buttons when clicked or selected via keyboard (crucial for form fields and web accessibility).
+    Focus (:focus): Triggers when an element receives input or key selection (input:focus { outline: 2px solid blue; }).*/
         input:focus {
-        outline: 3px solid blue; /* Highlights when clicked into */
-        
+            outline: 3px solid blue;
+            /* Highlights when clicked into */
         }
 
-        /* Attribute Selector ([attr="val"]): Targets specific input types 
-        ye code gemini se liya hai sirf idea ka lia kah or bhi bohat hai lekin usne ye suggest kiya hai filhal un ka sath*/
+        /* Attribute Selector ([attr="val"]): Targets specific input types
+    This code snippet is taken for reference to show that there are many options, but these are suggested for now */
         input[type="text"] {
-        border: 3px solid black;
-        padding: 8px;
-        
-    }
+            border: 3px solid black;
+            padding: 8px;
+        }
 
-    /* Group Selector :The group selector is used to minimize the code. Commas , are used to separate each selector in a grouping. This reduces the number of lines of code. The code also looks clean.*/
-    /* div, p, a {
-    property: value;
+        /* Group Selector :The group selector is used to minimize the code. Commas , are used to separate each selector in a grouping. This reduces the number of lines of code. The code also looks clean.*/
+        /* div, p, a {
+        property: value;
     } */
-
-
+    </style>
     </style>
 </head>
+
 <body>
     <main class="one">
         <p>I am first</p>
@@ -122,4 +133,5 @@
     <input type="text" placeholder="Enter your name">
     <button class="btn" type="submit">Submit</button>
 </body>
+
 </html>

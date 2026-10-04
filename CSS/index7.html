@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,45 +114,50 @@
    7. MIN/MAX H  -> Min-height for card stability; Max-height for scrollable overlays.
    ========================================================================== */
     -->
-   <style>
-    html{
-        /* default is 16 px for example agar me isko 30 px kardo ga to overall text ka size 30 px hogai ga lekin jo div ya koi bhi element rem istemal kare ga uska font size 60 ka = hogai ga. */
-        font-size: 16px;
-    }
-    .one{
-        /* width: 638px; */
-        background-color: coral;
-    }
-    div.one > p{
-         border: 5px solid seagreen;
-        /* vw has nothing to do with its parent , % does for example 80% take 80% percent width of it parent width */
-        width: 100vw;
-        box-sizing: border-box;   
-    }
-    .two{
-        /* border: 5px solid blue; */
-        box-sizing: border-box;
-        font-size: 2rem;
-        width: 100vw;
-        /* background-color: brown; */
-    }
-    .two > p {
-        
-        /* font-size: 2em; */
-        border: 5px solid black;
-        box-sizing: border-box;
-        /* width: 20%; */
-        text-overflow: ellipsis;
-        overflow: hidden;
-        background-color: blue;
-        /* min-height: 80vh; */
-        max-height: 30vh;
-    }
-    .third{
-        font-size: 5vmax;
-    }
-   </style>
+    <style>
+        html {
+            /* The default font size is 16px. For example, if I change this to 30px, the overall text size becomes 30px, but any div or element using rem (e.g., 2rem) will end up with a font size equivalent to 60px. */
+            font-size: 16px;
+        }
+            .one {
+                /* width: 638px; */
+                background-color: coral;
+            }
+
+            div.one>p {
+                border: 5px solid seagreen;
+                /* vw has nothing to do with its parent , % does for example 80% take 80% percent width of it parent width */
+                width: 100vw;
+                box-sizing: border-box;
+            }
+
+            .two {
+                /* border: 5px solid blue; */
+                box-sizing: border-box;
+                font-size: 2rem;
+                width: 100vw;
+                /* background-color: brown; */
+            }
+
+            .two>p {
+
+                /* font-size: 2em; */
+                border: 5px solid black;
+                box-sizing: border-box;
+                /* width: 20%; */
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background-color: blue;
+                /* min-height: 80vh; */
+                max-height: 30vh;
+            }
+
+            .third {
+                font-size: 5vmax;
+            }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Practicing CSS siziing Units</h1>
@@ -161,7 +167,9 @@
             <p>This is container one</p>
         </div>
         <div class="two">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsa labore aut voluptates? Architecto illum tenetur debitis, blanditiis qui asperiores consequuntur saepe doloremque quasi illo nobis nihil minima molestiae beatae, aliquam tempore soluta vitae ipsum iste necessitatibus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsa labore aut voluptates? Architecto
+                illum tenetur debitis, blanditiis qui asperiores consequuntur saepe doloremque quasi illo nobis nihil
+                minima molestiae beatae, aliquam tempore soluta vitae ipsum iste necessitatibus.</p>
         </div>
         <div class="three">his is container 2
             <p>This is container 3</p>
@@ -172,4 +180,5 @@
         <p>These css sizing units are suggested by harry and gemini</p>
     </footer>
 </body>
+
 </html>

@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colors</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
     <style>
         /* colors keyword */
         h1{
             /* color: red; */
             /* ye google se nikala hai instead of memorizing google ne mujhe code diya or mene copy */
             /* color: #0bEE0B; */
-            /* ab rbg ka matlab hota hai red green blue (ab har ek ki value 255 tak hoti hai to ham apna hisaab se sb ki value adjust karke bana sakte hai color) */
+            /* RGB stands for Red, Green, Blue (each value ranges from 0 to 255, so we can adjust values to build custom colors) */
             /* color: rgb(132, 42, 35); */
-            /* rgba ya same hai rgb ka bs isme alpha hai jiski value ya 0 ya 1 ya inke darmiyan ki , alpha basically iski opacity hoti hai */
+            /* RGBA is the same as RGB, but with an added alpha channel (value ranges from 0 to 1) which represents opacity */
             /* color: rgba(85, 141, 197, 0.36); */
-            /* hsl or isi tarhe hsla bhi hota hai  */
+            /* HSL works similarly, and HSLA is also available in the same way */
             color: hsl(240, 2%, 24%);
-            /* background ma bhi same exactly isi tarha color de sakte hai */
+            /* Background color can also be applied using the exact same format */
             background-color: rgb(132, 42, 35);
-            
 
         }
-
-
     </style>
 </head>
 <body>
     <h1>This is colors</h1>
     <p>
         <ol>
-            <!-- is me hamme kisi bhi color ka hex color code diya jata hai -->
+            <!-- Here we pass a hex color code for any color -->
             <li>Hex Color Code</li>
-            <!-- is me hame rbg code diya jata hai hm wo marzi hai google se search karke nikal loya khud banalo wo uper dikha howa hai kah kese bana hai rbg -->
+            <!-- Here we pass an RGB color code; we can search on Google or build it manually as shown above using RGB -->
             <li>RGB</li>
-            <!-- ye same rgb hi hai bs isme alpha hai jiski value 0 or 1 ka darmiyan ya exact 0 ya 1 hoti hai -->
+            <!-- This is the same as RGB, but includes an alpha channel whose value ranges between 0 and 1 (or exactly 0 to 1) -->
             <li>RGBA</li>
-            <!-- h=Hue which mean type of color, s=saturation and l=lightness, according to harry its not use so much but iska pata hona chahiya atleast -->
+            <!-- H = Hue (type of color), S = Saturation, and L = Lightness; good to know the concept at least -->
             <li>HSL</li>
         </ol>
     </p>
-    
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inline-Internal-External CSS</title>
-    <!--Internal CSS : Hm is CSS ko use karte hai lekin ziada tar external use karte hai uski wajha ya hai , ka ya for example apke pass thousand lines ka ek code hai or us me multiple h1 hai or app ya chahte ho kah un h1 ka color change karo to apk style css ka zariya un sb ka color to change kardo ga lekin is tarha apke html file hai kafi sari lines add hojai gai , to kyu na ham css ki ek alag file banai(external css)or us me apna sara css ka code lekhe bs yahi wajha hai ek kah ham external use karte hai internal ki jagha-->
-    <!--In CSS ki definition index1.html file ka andar hai-->
+    <!--Internal CSS : We can use this CSS, but external CSS is mostly preferred. The reason is, for example, if you have a thousand lines of code with multiple h1 elements, updating them via internal CSS will bloat the HTML file with many extra lines. That's why creating a separate CSS file (external CSS) to write all styling code is best practice, which is why we use external instead of internal CSS.-->
+    <!--The definition of Inline CSS is inside the index1.html file-->
     <!-- <style>
         h1{
             color: yellow;
@@ -14,18 +14,18 @@
         }
 
     </style> -->
-    <!---External CSS : yaha pr hamne ek css ki file ko link kiya hai html ka sath jiska andar tamam css ka code hoga-->
+    <!--External CSS : Here we linked an external CSS file with HTML which will contain all the CSS code-->
     <link rel="stylesheet" href="style2.css">
-    <!--Konsi CSS kb istemal karni hai:
-    Inline CSS : koshish yahi karo kah is istemal na hi karo in ideal cases , According to harry
-    Internal CSS : Ye css tb jb hamara webpage chota hai or hamne sirf halki phulki css use karni hai 
-    External CSS : ye css tb use karte hai jb ham koi bari production websie bana rahe hote hai or using an external css is best pratice because ap is ko attach or detach karsakte ho or apne temmmate ko kah bhi sakte ho kah ap css pa kam karlo me html me karleta ho , or bare websites like netflix etc sb ma external css istemal hoi hai-->
+    <!--When to use which CSS:
+    Inline CSS : Try to avoid using this in ideal cases.
+    Internal CSS : Use this when the webpage is small and requires light styling.
+    External CSS : Use this when building large production websites. Using external CSS is best practice because you can attach or detach it, and share it with teammates (e.g., one works on CSS while another works on HTML). Large websites like Netflix all use external CSS.-->
 
 </head>
 
 <body>
 
-    <!--Inline CSS : Hm is CSS ko kam use karte hai kyu kah for example hamare pas thousand lines ka code hai or ap ye chahte ho kah yr mene har h1 ka color change karna hai to is me bohat time laga ka matlab phele h1 ko dhondo phir us pr inline css apply karo , to isi wajha se is ko kam use kiya jata hai , ha lekin jb hamne for example sudden check karna hota hai then ham us ka itemal karlete hai -->
+    <!--Inline CSS : We rarely use this CSS because, for example, if we have a thousand lines of code and want to change the color of every h1, finding each h1 and applying inline styles takes too much time. That's why it is rarely used—except when we need quick testing/debugging.-->
     <!-- <h1 style="color: yellow; background-color: red;">There are three ways to add CSS</h1> -->
     <h1>There are three ways to add CSS</h1>
     <div>
@@ -38,5 +38,3 @@
     </div>
 
 </body>
-
-</html>

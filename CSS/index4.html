@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,37 +19,40 @@
     The margin of the element is controlled by the margin property. -->
     <style>
         /* we use margin to reset default css of browser */
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .box{
+
+        .box {
             background-color: blue;
         }
-        .box1{
+
+        .box1 {
             background-color: brown;
             margin: 25px;
             padding: 2px;
             border: 2px solid blue;
             height: 200px;
-            /* boxsizing:border-box ka ya matlab hai kah jo ya heigth 200px hai ya content,padding or border ko mila ka hai, 
-            Real-Life Scenario:
-            Maan lein aap 2 boxes ko ek hi row mein screen par barabar (50% each) fit karna chahte hain:
-            CSS
-            .box {
-            width: 50%;
-            padding: 20px; /* Padding add kar di   
-             }
-            border-box ke BINA (Default):
-            Browser width calculate karega: 50% + 20px (left) + 20px (right). Total width 50% se ziada ho jaye gi, aur doosra box jagah na milne ki wajah se toot kar neeche waali line mein gir jaye ga.
-            border-box KE SAATH:
-            Browser padding: 20px ko 50% width ke andar hi adjust kar le ga. Single box bilkul 50% ka rahe ga aur dono boxes screen par ek hi line mein perfect fit ho jayen ge.
-            Summary:
-            Jab bhi aap kisi element ko exact width ya height dete hain (jaise cards, forms, buttons, layout columns) aur us par padding ya border bhi lagate hain, tab box-sizing: border-box use hota hai taake aap ka page layout toote nahi. */
+            /* box-sizing: border-box means that the 200px height includes content, padding, and border together.
+    Real-Life Scenario:
+    Suppose you want to fit 2 boxes side-by-side in a single row on screen equally (50% each):
+    CSS
+    .box {
+    width: 50%;
+    padding: 20px;  Padding added
+    }
+    WITHOUT border-box (Default):
+    The browser calculates total width as 50% + 20px (left) + 20px (right). Total width exceeds 50%, causing the second box to break and drop to the next line.
+    WITH border-box:
+    The browser adjusts the 20px padding inside the 50% width. Each box stays at exactly 50% total width, fitting perfectly on a single row.
+    Summary:
+    Whenever you assign an exact width or height to an element (like cards, forms, buttons, layout columns) along with padding or border, use box-sizing: border-box so your layout does not break. */
             box-sizing: border-box;
         }
-        /* ab yaha pr dono ka margin same hai means 25 or 25 to in dono me se max koi nhi hai is ko ham kehte hai margin collapsed , but for example agar box1 ki margin 35 hoti so phir 35 implement hoti na ka 25 box 2 ko, Jab do vertical elements ek doosre ke ooper-neoche aate hain, unka vertical margin add nahi hota (25px + 25px = 50px ❌ nahi hota). Browser dono me se jo max/bada margin hota hai, wahi apply karta hai. Margin collapse sirf vertical (top-bottom) margins par hota hai. Horizontal (left-right) margins hamesha add hote hain.*/
-        .box2{
+
+        /* Now here both margins are the same (25px and 25px), so neither is greater; this concept is called margin collapse. However, if box1 had a margin of 35px, 35px would apply instead of 25px to box2. When two vertical elements sit directly above/below each other, their vertical margins do not add up (25px + 25px = 50px does NOT happen). The browser applies whichever margin is maximum between the two. Margin collapse occurs only on vertical (top-bottom) margins. Horizontal (left-right) margins always sum together. */
+        .box2 {
             color: red;
             background-color: bisque;
             margin: 25px;
@@ -59,13 +63,15 @@
         }
     </style>
 </head>
+
 <body>
-   <div class="box box1">
-    This is box 1
-   </div>
-   <div class="box box2" box>
-    This is box 2
-   </div>
+    <div class="box box1">
+        This is box 1
+    </div>
+    <div class="box box2" box>
+        This is box 2
+    </div>
 
 </body>
+
 </html>
