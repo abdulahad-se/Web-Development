@@ -1,0 +1,10 @@
+/*In CSS, elements with IDs are selected using a hash (#) symbol before the ID, and elements with classes are selected using a dot (.) before the class name.*/
+/* ID */
+#Ahad {
+    color: brown;
+    background-color: aquamarine;
+}
+.purple {
+    color: purple;
+    background-color: bisque;
+}
