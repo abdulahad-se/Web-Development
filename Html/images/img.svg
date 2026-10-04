@@ -1,0 +1,8 @@
+<!--So if we add simple this code it will not work when we call it through img because it is missing XML name space declaration.When you create a custom SVG file manually, the browser will not render it inside an <img> tag unless you explicitly define the XML namespace.
+<svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>-->
+
+<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
