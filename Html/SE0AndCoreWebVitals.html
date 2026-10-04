@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO & Core Web Vitals Notes</title>
+</head>
+<body>
+
+<!--
+======================================================================
+SEO AND CORE WEB VITALS NOTES
+======================================================================
+
+SEO (Search Engine Optimization)
+--------------------------------
+SEO is the practice of structuring and optimizing your website so 
+search engines like Google can crawl, index, and rank your pages higher 
+in search results.
+
+- On-Page SEO: 
+  Using semantic HTML tags (<header>, <article>, <h1>), proper <title> 
+  and <meta description> tags, descriptive alt attributes for images, 
+  and clean URL structures.
+
+- Technical SEO: 
+  Ensuring fast load speeds, mobile responsiveness, SSL security (https), 
+  and clean code without broken links or duplicate pages.
+
+
+Core Web Vitals
+---------------
+Core Web Vitals are a set of specific metrics defined by Google to 
+measure user experience on a web page. They evaluate speed, responsiveness, 
+and visual stability.
+
+1. LCP — Largest Contentful Paint (Loading Performance)
+   - What it is: Measures how long it takes for the largest visual element 
+     (usually a hero image, video banner, or large heading) to render on the screen.
+   - Good Score: Under 2.5 seconds.
+
+2. FID — First Input Delay (Interactivity)
+   - What it is: Measures the time from when a user first interacts with 
+     your page to the time the browser actually begins processing that interaction.
+   - Good Score: Under 100 milliseconds.
+   - Note: Google officially replaced FID with INP (Interaction to Next Paint) 
+     in 2024 to measure overall page responsiveness better.
+
+3. CLS — Cumulative Layout Shift (Visual Stability)
+   - What it is: Measures how much elements jump or shift around unexpectedly 
+     while the page is loading.
+   - Good Score: Under 0.1.
+   - Prevention: Always set explicit width and height attributes on <img> 
+     and <iframe> elements so the browser reserves space before they load.
+
+
+Lighthouse Report & How to Generate It
+--------------------------------------
+Lighthouse is an automated, open-source tool created by Google that 
+audits web pages for Performance, Accessibility, Best Practices, and SEO.
+
+- Performance: Evaluates LCP, CLS, speed index, and JavaScript execution time.
+- Accessibility: Checks color contrast, image alt attributes, screen reader readiness, and ARIA roles.
+- Best Practices: Checks HTTPS, console errors, deprecated APIs, and image aspect ratios.
+- SEO: Verifies meta tags, mobile-friendliness, crawlability, and HTTP status codes.
+
+Steps to Generate a Lighthouse Report:
+1. Open Google Chrome and go to the web page you want to audit.
+2. Open Chrome Developer Tools (F12 or Ctrl + Shift + I).
+3. Click on the Lighthouse tab in the top panel of DevTools.
+4. Select your Mode (Navigation), Device (Mobile or Desktop), and check the categories.
+5. Click "Analyze page load".
+======================================================================
+-->
+
+</body>
+</html>
