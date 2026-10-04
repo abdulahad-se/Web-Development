@@ -1,0 +1,90 @@
+1-(sourcefile: index1.html)
+    Introduction To Html.
+    Meaning of Elements for example Doctype html , head , meta ,body,etc.
+
+2-(sourcefile: index2html)
+    Vs Code Useful ShortCuts. 
+    headings(h1,h2 etc), 
+    Paragrapghs, anchor tags.
+
+3-(sourcefile: index3.html)
+    img tags, 
+    br tags, 
+    tables,
+    ordered list,
+    unordered list,
+    defintion list.
+
+4-(sourcefile: index4.html and SEO Core Web Vitals)
+    About SEO ( what things matter while making a website).
+
+5-(sourcefile: index5.html)
+    Forms.
+    id,placeholder,name,value?.
+    Label,
+    input type=text,
+    input type=radio,
+    input type=checkbox,
+    input type=number , 
+    input type=password,
+    textarea,
+    select(option),
+    and many more.
+
+6-(sourcefile: index6.html and ComprehensiveInlineAndBlockElements.txt)
+    Inline and Block elements;
+
+7-(sourcefile: index7.html)
+    Style Tag(internal Css),
+    Inline Css,
+    Id,
+    Classes.
+
+8-(sourcefile: index8.html)
+    Video tags,
+    audio tags,
+    svg,
+    calling svg using img,
+    iframe.
+
+9-(sourcefile: index9.html and SemanticTags.png)
+    Semantic tags.
+    header,
+    nav,
+    article,
+    section,
+    figure,
+    time,
+    aside,
+    main,
+    footer.
+
+10-(sourcefile: index10.html)
+    Html Entities.
+    &lt = <
+    &gt = >
+    &nbsp = space
+    &amp = &
+    &copy = copywrite
+    blockquote = quote having mutiple lines
+    quote = single line
+    cite = souce of that quote
+    pre tags
+    code tags.
+
+11-Audios for testing and performing task.
+
+12-Videos for testing and performing task.
+
+13-Quizz.html.
+
+14-Practice.html 
+--Practice1.html
+
+15-Exercise1.html.
+
+16-bookmarkManager.html
+
+17-TempeplateUsingHtml.html.
+
+
