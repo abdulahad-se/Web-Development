@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Entities</title>
+</head>
+<body>
+    <!---HTML entities are used to represent special characters in a format that the browser can understand. They start with an ampersand (&) and end with a semicolon (;).Why Use HTML Entities?
+    Here are some reasons:
+    Reserved Characters: Characters like <, >, and & are reserved in HTML.
+    Special Symbols: For symbols like ©, ®, or mathematical symbols.
+    Non-Breaking Spaces: To create white spaces that won't break into a new line.-->
+    <!---Common HTML Entities
+    &lt;  for <
+    &gt;  for >
+    &amp; for &
+    &nbsp; for a non-breaking space
+    &copy; for ©-->
+
+    <!--example :-->
+    <!--&lt : -->
+    <p> The 5 is &lt; than 10</p>
+    <p>The 5 is &gt; than 4</p>
+    <p>The he &amp; she are lovely couple</p>
+    <p>&copy; This tempelate belongs to me </p>
+    <p>The man should be brave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.....</p>
+
+<!--<code> and <pre> are HTML tags used together to present source code neatly on a web page.
+
+<code> (Inline Code): Marks text as computer code. Browsers display it using a monospaced (fixed-width) font, but it ignores extra spaces and new lines, wrapping text normally like a standard paragraph.
+
+<pre> (Preformatted Text): Preserves exact spacing, tabs, and line breaks just as you typed them inside VS Code.
+
+How They Work Together
+Using <code> alone puts everything on one line. Wrapping <code> inside <pre> keeps your code structured, indented, and readable.-->
+    <pre>
+        <code>
+            <p>Boiler plate code for Java</p>
+            public class Main{
+                public static void main(String [],args){
+
+                }
+            }
+            <p>Boiler plate code for Html</p>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <!--The <blockquote> and <q> tags serve to define quotations in HTML. While <blockquote> is used for longer, block-level quotes, <q> is used for shorter, inline quotes.
+    Why Use These Tags?
+    They provide semantic meaning to your quotations, making it easier for search engines to understand the context and relevance of the content.-->
+    <blockquote cite="https://www.goodreads.com/author/show/9810.Albert_Einstein">
+       “Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
+    </blockquote>
+
+    <q cite="https://www.goodreads.com/author/show/22302.Frank_Zappa">“So many books, so little time.”</q>
+</body>
+</html>

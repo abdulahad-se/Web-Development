@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-Learning</title>
+</head>
+
+<body>
+    <!--Forms :
+    An HTML form is an interactive section of a web page containing input fields—like text boxes, checkboxes, radio buttons, and submit buttons—that allows visitors to type in data.
+    Why We Use It:
+    We use forms to collect information from users and send it to a server. Without forms, a website would be one-way (you could only read content, but you couldn't login , search for products, leave comments, or buy anything online).-->
+    <!--Use POST for Form Submissions (Most Common for Forms): Use this when users submit data that changes something on the server or handles sensitive info—like login forms, signup pages, contact forms, or file uploads.
+    Why: It hides the user input inside the request body instead of showing it in the browser URL bar.
+    HTML Example: <form action="/submit" method="POST">
+    Use GET for Search Inputs: Use this only when a form is meant to filter, search, or request specific information without changing anything on the server.
+    Why: It puts the search query directly into the URL (e.g., [google.com/search?q=html](https://google.com/search?q=html)), making it easy for users to bookmark or share the search results link.
+    HTML Example: <form action="/search" method="GET">-->
+    <h1>Forms Learning Just</h1>
+    <form action="post"><!-- 
+  Another difference between GET and POST is data capacity: GET has a limited payload size, whereas POST can handle larger amounts of data. This makes POST the preferred choice for sending large datasets or file uploads. 
+  GET appends data directly to the URL (making it visible in the browser address bar and subject to URL length limits), while POST transmits data securely inside the HTTP Request Body.
+-->
+    <div>
+        <!--A <div> is an invisible box used to group HTML elements together so you can style them or control their layout with CSS.-->
+
+
+        <!-- Label Tag
+  The <label> tag serves as a caption or title for an HTML form element (such as text boxes, checkboxes, or radio buttons). 
+
+  Key benefits of using <label>:
+  1. Clickable Area: Links directly to its target input field, allowing users to click the label text to focus the input or toggle a checkbox.
+  2. Accessibility: Informs screen readers what each input field represents, making forms accessible to visually impaired users.
+-->
+        <label for="username">Enter your username</label>
+        <!--the placeholder attribute provides a hint to the user about what to enter or ye id basically ek unique identifier hota hai.
+    The text input type is the most basic form of input and is widely used for collecting simple text data .is ka elawa or bhi bohat input tags hota hai jese ke password radio checks etc-->
+        <!--Neither should be empty—both name and id should be filled in, but they serve two entirely different purposes in HTML:
+    name attribute: Sent to the server when the form is submitted. Without it, the  server will completely ignore that input field.
+    id attribute: Used on the client side (front-end). It connects the <label> to the input so clicking the label highlights the button/textbox, and it allows CSS or JavaScript to target that specific element. 
+    name="username" tells the server which group or question the submitted answer belongs to.  
+     Yes! id is for the label.
+    It links the <input> to its <label> so the browser knows they belong together.-->
+        <input type="text" name="username" id="username" placeholder="Enter your name" >
+        <!--Radio buttons are used when you want the user to select only one option from a set of choices.-->
+    </div>
+    <div>
+        <!---More keywords are autofocus(it autmatically focus the cursor on which this attribute is used) , required(make the field compulsory) , action(that specifices the url on which the data is sent after submission)-->
+        <label for="male"></label>
+        <!--name="gender": Tells the server what question is being answered.
+    value="male": Tells the server what answer the user chose.
+    When a user selects this radio button and submits the form, the server receives the key-value pair: gender=male
+     If you don't add a value attribute:
+    For Radio Buttons & Checkboxes: The browser sends on as the default answer (e.g.,gender=on). The server won't know if the user picked Male, Female, or another option—it just knows something was clicked.
+    For Text Inputs (type="text"): It starts completely blank, which is usually fine because whatever the user types automatically becomes the value.-->
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+    </div>
+    <div>
+        <input type="checkbox" name="agreeordisagree" id="TermsandConditions">
+        <label for="TermsandConditions">Agree To All Terms And Conditions</label>
+    </div>
+    <div>
+        <!--The textarea element is used when you need multiline text input from the user. This is particularly useful for comments, reviews, or any other type of input where the length is unpredictable-->
+        <label for="comment">Comments</label>
+        <br><!--According to code with harry br taguse karne itna sai nhi hai waja wo aga ki videos ma batai ga-->
+    <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+    </div>
+    <div>
+        <!--The select element creates a dropdown menu for the user. It is useful when you have a predefined list of options for the user to choose from.-->
+        <label for="Rating"></label>
+        <select name="Rating" id="Rating">
+            <!--Each option inside the select tag represents an item in the dropdown list.-->
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+        </select>
+
+    </div>
+    </form>
+
+</body>
+
+</html>

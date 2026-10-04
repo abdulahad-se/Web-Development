@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- 
+  VS Code Shortcut 1: Alt + Shift + Down Arrow = Replicates the line you want.
+  VS Code Shortcut 2: Hold Alt and click wherever you want to place multiple cursors.
+  HTML Headings: Headings are provided up to <h6> in HTML, which is more than enough so an <h7> tag is not needed. If needed, you can just use <h6> because text size decreases after <h1> and becomes quite small at <h6>. <h1> through <h6> are used to build content hierarchy.
+  VS Code Shortcut 3: Shift + Right Arrow highlights the text, Ctrl + X cuts the text, pressing End moves the cursor to the end, and Ctrl + V pastes the text.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><i>MY BOOk MARKS </h1>
+    </i><!--h1 is main level heading and i is converting text into italic if i put b instead of i it convert it into bold-->
+    <h2>Main book marks </h2><!--h2 is secondary level heading-->
+    <h3>Main book marks </h3><!--h2 is secondary level heading-->
+    <h4>Main book marks </h4><!--h2 is secondary level heading-->
+    <h5>Main book marks </h5><!--h2 is secondary level heading-->
+    <h6>Main book marks </h6><!--h2 is secondary level heading-->
+    <!-- 
+  The <p> tag is used to write paragraphs. 
+  To generate dummy text, typing an Emmet abbreviation like "lorem23" inside a <p> tag generates a 23-word paragraph, while "lorem10" generates 10 words. 
+  This is useful when building a template, as you need filler content depending on how many words a specific section requires.
+-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore eveniet amet placeat id aliquam,
+        possimus laboriosam alias ducimus molestias facere voluptatibus cum?
+    <p>
+        <!-- Word wrap was enabled by going to View -> Toggle Word Wrap to prevent horizontal scrolling. -->
+    <p style="background-color: brown;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, suscipit.</p>
+    <!-- 
+  The 'style' property is an attribute of the <p> tag, just like 'lang' is also an attribute. 
+  Using style="background: brown;" sets the paragraph's background color to brown, which is known as Inline CSS. 
+  In industry-level websites, Inline CSS is used sparingly because it reduces maintainability and reusability. 
+  
+  Attribute: Attributes provide enhanced functionality to an HTML element. 
+  For example, in <link rel="stylesheet" href="style.css">, both 'rel' and 'href' are attributes.
+-->
+    <a href="https://google.com">open google</a>
+    <!-- 
+  The anchor tag (<a>) is used to add links inside our existing content. 
+  For example, <a href="https://google.com">open google</a> opens the link in the same tab. 
+  To open it in a new tab instead, we use the target="_blank" attribute.
+-->
+    <p><a target="_blank" href=https://google.com">open google</a></p>
+    <p></p><a target="_blank" href=https://google.com">open google</a></p>
+    <p></p><a target="_blank" href="https://www.instagram.com/a_b_d_u_l_a_h_a_d_5_/?hl=en">open insta</a></p>
+    <!-- 
+  Ideally, this is not good practice. We should never use paragraph tags (<p>) to create lists; instead, we should use proper HTML list tags (<ul>, <ol>).
+-->
+
+
+</body>
+
+</html>

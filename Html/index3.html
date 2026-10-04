@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head>
+
+<body>
+    <!-- <img width="230" height="230" src="img.png" alt="Aeroplane picture"> 
+  This is an <img> tag where 'width', 'height', 'src', and 'alt' act as its attributes. 
+  The 'alt' attribute is optional, but it provides alternative text if the image fails to load (e.g., if "img2.png" is missing, the browser displays "Aeroplane picture"). 
+  We use the 'width' attribute to adjust image width manually. Alternatively, specifying only the 'height' attribute allows the browser to automatically calculate and adjust the width to maintain the aspect ratio.
+-->
+    <img height="230" src="img.png" alt="Aeroplane picture">
+    <br><!--Line break Tag-->
+    <table>
+        <!--To add a title to your table we use caption . This term help in both SEO and accessibility-->
+        <caption>Employee Details</caption>
+        <thead>
+            <!--Header content-->
+            header
+        </thead>
+        <thead>
+            <tr> <!--Table row 1-->
+                <th>Skill</th><!--Table Heading-->
+                <th>Name</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody><!--The content inside table come under tbody-->
+            <tr>
+                <td>Java Developer</td><!--Table Data-->
+                <td>Abdul Ahad</td>
+                <td>Software Engineer</td>
+            </tr>
+            <tr>
+                <td colspan="2">Abdul</td><!--It mean Abdul takes 2 column-->
+                <td rowspan="2">Abdul</td><!--It mean Abdul Take 2 rows-->
+            </tr>
+        </tbody>
+        <tfoot>
+            <!--Footer content-->
+            <tr>
+                <td colspan="2">Abdul</td><!--It mean Abdul takes 2 column-->
+                <td rowspan="2">Abdul</td><!--It mean Abdul Take 2 rows-->
+            </tr>
+
+            footer
+        </tfoot>
+        <!--Ideally head , body , foot-->
+    </table>
+
+    <!--List :
+Our day-to-day lives often involve the use of lists. For example, when we go shopping, the bill we receive includes a list of all the items we've purchased. In a similar manner, web developers use lists to neatly display data on websites.There are two types of list ordered and unordered list-->
+
+    <!--Unordered List : 
+    An unordered list is a list of items that are not arranged in any specific, sequential order. Unlike ordered lists, the items in an unordered list are typically marked with bullet points, dashes, or other symbols to indicate list membership, but these markers do not imply any particular order.
+    Displays items using bullets.
+    An unordered list uses bullets to display items. It is suitable for listing items where the order doesn't matt
+        Key Characteristics of Unordered Lists
+        No specific sequence is required.
+        Typically displayed as bullet points.
+        Defined using the <ul> tag.
+        Individual items use the <li> tag.
+            Customizing Bullet Points with 'type' Attribute
+            You can specify the style of bullet points using the type attribute. It supports three values:
+
+            disc - default bullet style
+            square
+            circle-->
+    <ul type="circle--"><!--by adding(--)we can fill the hollow circle and square-->
+        <li>Mirza Abdul Ahad Baig</li>
+        <li>19 years Old</li>
+        <li>Software Engineer</li>
+    </ul>
+
+    <!--Ordered List : 
+    An ordered list is a list of items that are arranged in a specific, sequential order. Each item in the list is usually numbered to indicate its position in the sequence. Ordered lists are commonly used when the sequence of the items is important, such as in step-by-step instructions or rankings.
+    Displays items in a numerical sequence, and supports various numbering styles like Arabic numerals, Roman numerals, and so on.
+    An ordered list uses numbers or other types of markers to indicate the sequence of items. It's ideal for listing steps in a process or ranking items in order of importance.
+      Key Points
+    Ordered lists are used for items that follow a sequence.
+    They are created using the <ol> (Ordered List) tag.
+    List items are enclosed within <li> (List Item) tags.
+        Setting the 'type' Attribute
+    The type attribute specifies the style of numbering. You have several options:
+    Uppercase Roman Numerals: Use type="I"
+    Lowercase Roman Numerals: Use type="i"
+    Arabic Numerals: Use type="1" (This is the default if the type attribute is not specified)
+    Lowercase Alphabetical Letters: Use type="a"
+    Uppercase Alphabetical Letters: Use type="A"
+    Setting the 'start' Attribute
+    The start attribute specifies the starting number for the list.-->
+    <ol type="A">
+        <li >Mirza Abdul Ahad Baig</li>
+        <li>19 years Old</li>
+        <li>Software Engineer</li>
+    </ol>
+
+    <!--Definition List :
+    A Definition List in HTML is used to represent a list of terms along with their corresponding descriptions or definitions. The Definition List is created using the <dl> (Definition List) element, which wraps around one or more pairs of <dt> (Definition Term) and <dd> (Definition Description) elements.
+    A definition list arranges items in a way similar to a dictionary, with a term followed by its definition. This is useful for glossaries or to display metadata.
+    Understanding the example
+    In this example:
+
+    <dl> is the container for the list.
+    <dt> defines the terms that you want to explain.
+    <dd> contains the definitions or explanations for the terms.-->
+    <h1>HTML Definition List</h1><!--We know it is heading-->
+    <dl>
+        <dt>Html</dt><!--dt stands for definition term-->
+        <dd><!--dd definition ka definition hoti hai-->
+            Hype Text Markup Language: The standard language for creating webpages.
+        </dd>
+        <dt>CSS</dt>
+        <dd>
+            Cascading Style Sheets: A style sheet language used for describing the look and formatting of a document
+            written in HTMl.
+        </dd>
+        <dt>JavaScript</dt>
+        <dd>
+            A programming language commanly used in web developement to add interactive features.
+        </dd>
+
+    </dl>
+</body>
+
+</html>

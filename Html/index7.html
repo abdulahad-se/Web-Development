@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id and Classest</title>
+    <style>
+        p{
+            color: blue;
+            font-size: 18px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="styleindex7.css">
+</head>
+<body>
+    <!--Id : An ID is an attribute, a unique identifier assigned to only one HTML element within a page. It is often used for unique styling and JavaScript manipulations.-->
+    <div id="Ahad"></div>
+
+    <!-- Class : The class attribute lets you give the same name to multiple HTML elements. That way, you can easily change their look or behavior all at once. Classes are not unique and can be assigned to multiple elements. They are generally used for applying the same styles or behaviors to a group of elements.-->
+      <div class="red bg-yellow">Class</div><!-- When assigning multiple classes to an HTML element, separate each class name with a space. -->
+      <p style="color: brown;" class="red bg-yellow">Class</p><!-- Inline CSS was used here to avoid confusion. A <style> tag was previously added above that set all <p> elements to blue, which caused this paragraph to inherit blue as well. Applying Inline CSS directly overrides that global rule for this specific element.
+-->
+
+      <!--Style tag implemented in head but also can be used in body aswell-->
+      <p>This is blue paragraph</p>
+      <p class="highlight">This is purple</p>
+
+      <!-- This code demonstrates how to target HTML elements using IDs and classes in CSS (CSS File: styleindex7.css).
+-->
+        <div id="Ahad">id example</div>
+        <span class="purple"> class example</span>
+
+    
+</body>
+</html>

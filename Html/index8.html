@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Audio Tags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Video Tag : The <video> tag is used to embed video files in an HTML document. It supports multiple attributes to control the video playback.
+        Attributes for <video> Tag
+        src: Specifies the path to the video file.
+        controls: Adds video controls, like play, pause, and volume.
+        autoplay: Automatically starts playing the video when the page loads.
+        loop: Repeats the video once it ends.
+        muted: Mutes the video by default.
+        poster: Specifies an image to be displayed before the video starts playing.
+        width and height: Specifies the dimensions of the video-->
+    <video src="WhatsApp Video 2026-08-22 at 19.16.20.mp4" controls poster="img.png"></video>
+    <!--Here is the exact breakdown to keep in mind when writing code in VS Code:
+    OptionCode PatternWhen to UseOption A: Single Source (Most Common)<video src="movie.mp4" controls></video>Standard approach when you only have one MP4 file. No <source> or type needed.
+    Option B: Multiple Sources (Best Practice)<video controls><source src="movie.mp4" type="video/mp4"></video>Used when offering multiple file formats (e.g., MP4 + WebM). Always include type="" here for performance.-->
+    <!--in simple words if we have one video , audio , svg or ifram then we just simple use src as we are using , but when there is more than one then the best practice is to use source src="URl" type="type of audio,video,svg,iframe etc"-->
+    <!--Definition of the <source> Tag
+    HTML <source> Tag:
+    An HTML element used inside media containers (<video>, <audio>, and <picture>) to specify   alternative media files for a single media player. It allows developers to offer the exact    same content in multiple file formats or codecs so that the browser can automatically  choose and load the first format it supports.
+    Key Characteristics
+    Child Element: It cannot exist on its own; it must be nested inside <video>, <audio>, or  <picture>.
+    Void Element: It has no closing tag (</source> does not exist).
+    Fallback System: The browser reads the <source> tags sequentially from top to bottom,   downloads only the first supported file, and skips all remaining options.-->
+    <!--for example :-->
+    <video controls>
+        <source src="WhatsApp Video 2026-08-22 at 19.16.20.mp4" type="video/mp4">
+        <source src="WhatsApp Video 2026-08-22 at 19.16.20.mp4" type="video/WebM">
+        your browser doesnot support
+        <!--the type is option but using it is good practice as it tell the browser what type of media it is-->
+    </video>
+
+    <!--Audio Tag :he <audio> tag is used to embed audio files in an HTML document. It also supports multiple attributes for control.
+        Attributes for <audio> Tag
+        src: Specifies the path to the audio file.
+        controls: Adds audio controls, like play, pause, and volume.
+        autoplay: Automatically starts playing the audio when the page loads.
+        loop: Repeats the audio once it ends.
+        muted: Mutes the audio by default.
+        preload: Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none').
+        he "preload" attribute can have the following values:
+
+        none: This is the default value. It indicates that the browser should not preload the audio  file at all. The audio file will only start downloading when the user initiates playback.
+
+        metadata: This value tells the browser to preload only the metadata of the audio file, such as its duration and basic information about the audio. This can be useful if you want to  display the audio duration to the user without fully loading the audio data.
+
+        auto: This value instructs the browser to preload the entire audio file as much as possible without delaying the loading of other important page content. The browser will try to load the audio file in the background so that it's ready to play when the user decides to start it.-->
+    <audio src="Beneath_the_Velvet_Keys.mp3" controls preload="auto"></audio>
+
+    <!--SVG : SVG stands for Scalable Vector Graphics. It is an XML-based file format used to define 2D graphics, logos, icons, and illustrations for the web.
+
+        Unlike standard image formats (.png, .jpg, .jpeg), which are raster graphics made of a fixed grid of pixels, an SVG file is written entirely in code using mathematical lines, paths, shapes, and colors.
+        
+        Key Characteristics of SVG
+        Infinite Scalability: Because it relies on math rather than pixels, an SVG image never loses quality or becomes blurry, regardless of screen size or zoom level.
+        
+        Tiny File Sizes: SVG files contain plain text code, making them significantly lighter than PNGs for icons, logos, and UI graphics.
+        
+        Stylable with CSS: You can directly apply CSS to an inline SVG to change fill colors, stroke widths, hover states, and animations.
+        
+        Manipulable with JavaScript: Every shape inside an SVG exists in the DOM, allowing you to dynamically animate or control elements using JS.-->
+    <!--SVG Attributes
+        SVG comes with a set of attributes to control its behavior:
+        
+        width and height: To set the dimensions.
+        viewBox: To set the coordinate system.
+        fill and stroke: To set the colors.-->
+    <!--Inline SvG example-->
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+    <!--img tag example-->
+    <img src="img.svg" alt="it is an svg image">
+
+    <!--Another way of svg using css but we have to make class first-->
+    <div class="background">
+        A css sample SVG
+    </div>
+    <div>
+        <!--iframe: An iFrame is an HTML element that enables an inline frame for the embedding of external content. Essentially, you can load another web page within a designated area of your current webpage
+        Attributes of iFrame
+        Several attributes can enhance the functionality of an iFrame:
+        src: Specifies the URL of the page to embed.
+        height and width: Define the dimensions.
+        frameborder: Indicates whether to display a border.
+        scrolling: Controls the scrollbars.
+        name: For targeting the iFrame in JavaScript.-->
+        <!--here we copy the iframe code yt video-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HD13eq_Pmp8?si=Fem4pXIVswcz0iBT&amp;start=2146" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div>
+        <iframe src="https://www.codewithharry.com/tutorial/html-iframes" width="500" height="500"></iframe>
+    </div>
+</body>
+
+</html>
