@@ -1,0 +1,233 @@
+JavaScript Topics
+
+1-JavaScript Introduction and Running JavaScript (sourcefiles: index.html, script.js, new.js)
+    - Linking an external JavaScript file with the script tag.
+    - Internal JavaScript.
+    - Running JavaScript in the browser and in Node.js.
+    - console.log().
+    - Browser APIs: alert(), prompt(), confirm().
+    - Changing the document title and body styles with document.
+
+2-Variables, Scope, Hoisting, and Strict Mode (sourcefile: 01-Basics/01_Variables.js)
+    - const, let, and var.
+    - Reassignment and redeclaration.
+    - Block scope and function scope.
+    - Implicit global variables and why they should be avoided.
+    - "use strict".
+    - Hoisting and the temporal dead zone.
+    - console.table().
+
+3-JavaScript Data Types and Type Checking (sourcefile: 01-Basics/02_Datatypes.js)
+    - Primitive data types: number, bigint, string, boolean, null, undefined, and symbol.
+    - Objects and key-value pairs.
+    - typeof and the historical typeof null behavior.
+    - Unique Symbol values.
+    - BigInt values and the n suffix.
+
+4-Type Conversion and Basic Operations (sourcefile: 01-Basics/03_ConversionOperations.js)
+    - Converting values with Number(), Boolean(), and String().
+    - Conversion results for strings, null, undefined, and booleans.
+    - NaN.
+    - Arithmetic operators: +, -, *, /, %, and **.
+    - String concatenation and type coercion.
+    - Operator precedence.
+    - Unary plus.
+    - Chained assignment.
+    - Prefix and postfix increment operators.
+
+5-Comparison Operators and Strict Equality (sourcefile: 01-Basics/04_Comparisons.js)
+    - >, <, >=, <=, ==, and !=.
+    - Type coercion during loose comparisons.
+    - Comparisons involving strings, numbers, null, and undefined.
+    - Strict equality with ===.
+    - Prefer comparing values of the same data type.
+
+6-Strings and String Methods (sourcefile: 01-Basics/05_Strings.js)
+    - String concatenation.
+    - Template literals and string interpolation.
+    - String objects and indexed access.
+    - length, toUpperCase(), charAt(), and indexOf().
+    - substring() and slice().
+    - trim(), trimStart(), and trimEnd().
+    - replace().
+    - includes().
+    - split().
+    - Accessing an object's prototype with __proto__.
+
+7-Numbers, Number Methods, and Math (sourcefile: 01-Basics/06_nums_and_maths.js)
+    - Number primitives and Number objects.
+    - toString(), toFixed(), toPrecision(), and toLocaleString().
+    - Localized number formatting, including en-PK.
+    - Math.abs(), round(), ceil(), floor(), sqrt(), and pow().
+    - Math.min() and Math.max().
+    - Math.random().
+    - Generating random integers within a range.
+
+8-Dates, Timestamps, and Temporal (sourcefile: 01-Basics/07_Dates_In_JS.js)
+    - Date objects and the Unix epoch.
+    - Creating dates with date components and date strings.
+    - toString(), toDateString(), toISOString(), toJSON(), and locale methods.
+    - getDay() and getMonth().
+    - Customizing toLocaleString().
+    - Date.now() and Unix timestamps.
+    - Math.floor() for converting timestamps to whole seconds.
+    - Temporal.PlainDate, Temporal.PlainTime, and Temporal.Instant.
+    - Temporal date arithmetic with add(), subtract(), and until().
+    - Differences between legacy Date and the immutable Temporal API.
+
+9-Data Types and Memory Management (sourcefile: 01-Basics/Datatypes-And-MemoryManagement-Summary.js)
+    - Primitive and reference values.
+    - Stack and heap memory concepts.
+    - Copying primitive values versus object references.
+    - Mutable and immutable data.
+    - Shallow copies and deep copies.
+    - Garbage collection and memory considerations.
+
+10-Arrays and Array Methods (sourcefiles: 02-Basics/01-Arrays.js, 02-Basics/02-Arrays.js)
+    - Creating arrays with literals and the Array constructor.
+    - Resizable arrays and mixed data types.
+    - Array indexing and length.
+    - Shallow copies.
+    - push(), pop(), unshift(), and shift().
+    - includes(), indexOf(), and lastIndexOf().
+    - join().
+    - slice() versus splice().
+    - concat() and the spread operator.
+    - flat().
+    - Array.isArray(), Array.from(), and Array.of().
+
+11-Objects and Object Methods (sourcefiles: 02-Basics/03-Objects.js, 02-Basics/04-Objects.js)
+    - Object literals and objects created with new Object().
+    - Singleton and non-singleton objects.
+    - Symbol keys.
+    - Dot notation and bracket notation.
+    - Updating object properties.
+    - Object.freeze().
+    - Nested objects and arrays of objects.
+    - Adding functions as object methods.
+    - The this keyword inside object methods.
+    - Object.assign() and object spread.
+    - Object.keys(), Object.values(), and Object.entries().
+    - hasOwnProperty() and property enumerability.
+
+12-Object Destructuring, JSON, and APIs (sourcefile: 02-Basics/05-ObjectDestructureAndJsonApi.js)
+    - Object destructuring.
+    - Destructuring with renamed variables.
+    - API as a bridge between applications.
+    - JSON syntax and supported data types.
+    - JSON objects and arrays of objects.
+    - Differences between JavaScript objects and JSON.
+    - Reading data shaped like an API response.
+
+13-Functions, Parameters, and Arguments (sourcefile: 03-Basics/01_Functions.js)
+    - Function declarations and function calls.
+    - Parameters versus arguments.
+    - Returning values from functions.
+    - Undefined results from functions without return.
+    - Early return.
+    - Input validation inside functions.
+    - Default parameters.
+    - Rest parameters.
+    - Passing objects and arrays to functions.
+    - Reference behavior when passing objects.
+
+14-Scopes, Hoisting, and Function Expressions (sourcefile: 03-Basics/02_Scopes.js)
+    - Global scope and local block scope.
+    - Nested scopes and lexical access.
+    - Why let and const are preferred over var.
+    - Function declaration hoisting.
+    - Functions stored in variables.
+    - Accessing variables before initialization.
+
+15-this and Arrow Functions (sourcefile: 03-Basics/03_thisAndArrowFunction.js)
+    - this in object methods.
+    - Changing object context and reading properties with this.
+    - Top-level this in Node.js and browsers.
+    - this inside regular functions.
+    - Arrow function syntax.
+    - Explicit and implicit arrow returns.
+    - Returning objects from arrow functions.
+
+16-IIFE and Private Initialization Scope (sourcefile: 03-Basics/04_IIFE.js)
+    - Immediately Invoked Function Expressions.
+    - Named and unnamed IIFEs.
+    - Creating a private scope.
+    - Passing arguments to an IIFE.
+    - Why the terminating semicolon is important between IIFEs.
+
+17-Execution Context and Call Stack (sourcefile: 03-Basics/05_CallStack.js)
+    - JavaScript as single-threaded and synchronous.
+    - Global, function, and eval execution contexts.
+    - Memory creation and execution phases.
+    - Function execution contexts created on each call.
+    - Call stack and LIFO order.
+    - Nested function calls and stack unwinding.
+    - console.trace() and debugging the call stack.
+    - Stack overflow and RangeError.
+
+18-Control Flow and Conditional Statements (sourcefile: 04-Control-flow/01_One.js)
+    - if, else, and else if.
+    - Conditional block scope.
+    - Logical operators: &&, ||, and !.
+    - Single-line conditional statements.
+    - Combining authentication and access conditions.
+
+19-Switch Statements (sourcefile: 04-Control-flow/02_Switch.js)
+    - switch, case, and default.
+    - Matching numeric and string values.
+    - break and fall-through behavior.
+    - default as the fallback branch.
+
+20-Truthy, Falsy, and Empty Values (sourcefile: 04-Control-flow/03_TruthyAndFalsy.js)
+    - Truthy and falsy values.
+    - Falsy values: false, 0, -0, "", 0n, null, undefined, and NaN.
+    - Truthy strings, arrays, objects, and functions.
+    - Checking whether an array is empty.
+    - Checking whether an object is empty with Object.keys().
+    - Loose equality examples involving boolean, number, and empty string values.
+
+21-Nullish Coalescing and Ternary Operators (sourcefile: 04-Control-flow/04_NCO.js)
+    - Nullish coalescing operator (??).
+    - Difference between ?? and a ternary operator.
+    - Fallback values for null and undefined.
+    - Ternary syntax: condition ? true : false.
+    - Nested ternary expressions.
+
+22-for Loops, Nested Loops, break, and continue (sourcefile: 05-Loops/01_ForLoopsWithBreakAndContinue.js)
+    - for loop syntax and counters.
+    - Conditions inside loops.
+    - Nested for loops.
+    - Generating multiplication tables.
+    - Traversing arrays with a for loop.
+    - break to stop a loop.
+    - continue to skip an iteration.
+
+23-while and do...while Loops (sourcefile: 05-Loops/02_WhileAndDoWhileLoops.js)
+    - while loop syntax.
+    - Updating loop state.
+    - Traversing arrays with while.
+    - do...while execution before condition checking.
+    - Choosing for, while, or do...while.
+
+24-for...of, Map, and Iterable Values (sourcefile: 05-Loops/03_HighOrderArrayLoops.js)
+    - for...of and iterable values.
+    - Iterating through arrays and strings.
+    - Map key-value pairs.
+    - Map insertion order and unique keys.
+    - Destructuring Map entries in a loop.
+    - Why ordinary objects are not directly iterable with for...of.
+
+25-for...in and Object Iteration (sourcefile: 05-Loops/04_HighOrderArrayLoops2.js)
+    - for...in and enumerable property keys.
+    - Iterating through object keys and values.
+    - Accessing object values with bracket notation.
+    - for...in behavior with arrays.
+    - Why Map is not traversed with for...in.
+
+26-forEach and Callback Functions (sourcefile: 05-Loops/05_HighOrderArrayLoops3.js)
+    - Array.prototype.forEach().
+    - Anonymous callback functions.
+    - Arrow-function callbacks.
+    - Passing a named function by reference.
+    - forEach() arguments: item, index, and array.
+    - Iterating through arrays of objects.
