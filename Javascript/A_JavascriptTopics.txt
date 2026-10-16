@@ -255,3 +255,14 @@ JavaScript Topics
     - Reducing an array to a single number.
     - Calculating totals from arrays of objects.
     - Using both traditional and arrow-function callbacks.
+
+30-DOM Introduction and Basic DOM Manipulation (sourcefile: 06_DOM/01_DOMIntroduction.html)
+    - The browser window object and the document object.
+    - The DOM tree and the relationship between window, document, and HTML elements.
+    - Nodes, including element nodes, text nodes, and comment nodes.
+    - Inspecting the page with console.log(), document, and document.baseURI.
+    - Reading page links with document.links.
+    - Selecting elements with getElementById() and getElementsByClassName().
+    - Changing an element's content with innerHTML.
+    - Using the browser console to inspect and manipulate a live webpage.
+    - Understanding that firstHeading refers to Wikipedia's page-heading ID.
