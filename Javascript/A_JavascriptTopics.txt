@@ -231,3 +231,27 @@ JavaScript Topics
     - Passing a named function by reference.
     - forEach() arguments: item, index, and array.
     - Iterating through arrays of objects.
+
+27-filter and Conditional Array Selection (sourcefile: 05-Loops/06_FilterMapAndReduce.js)
+    - Definition and syntax of Array.prototype.filter().
+    - Creating a new array from elements that pass a condition.
+    - filter() callback parameters: element, index, and array.
+    - Implicit and explicit callback returns.
+    - Filtering arrays of objects by one or more properties.
+    - Difference between filter() and collecting values with forEach().
+
+28-map and Array Transformation (sourcefile: 05-Loops/07_FilterMapAndReduce2.js)
+    - Definition and syntax of Array.prototype.map().
+    - Creating a new array by transforming every element.
+    - map() callback parameters: element, index, and array.
+    - Preserving the original array and the mapped array length.
+    - Chaining map() and filter().
+    - Choosing map() for transformation rather than selection.
+
+29-reduce and Accumulating Array Values (sourcefile: 05-Loops/08_FilterMapAndReduce3.js)
+    - Definition and syntax of Array.prototype.reduce().
+    - Accumulator and current value.
+    - Providing an initial accumulator value.
+    - Reducing an array to a single number.
+    - Calculating totals from arrays of objects.
+    - Using both traditional and arrow-function callbacks.
