@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Introduction</title>
+</head>
+<body>
+    <div class="learning">
+        <h1 class="learningDom">Dom learning </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, provident ratione. Accusantium dicta, ducimus dolores obcaecati ipsum fugiat ad nobis!</p>
+    </div>
+</body>
+</html>
+
+<!-- Some browser-side DOM examples and DOM manipulation notes from learning the DOM. -->
+ <!--
+    DOM tree:
+
+    window
+    └── document
+        └── html
+            ├── head
+            │   ├── title
+            │   │   └── text node
+            │   └── meta
+            │       └── attribute
+            └── body
+                └── div
+                    ├── attribute
+                    ├── h1
+                    │   └── text node
+                    └── p
+                        └── text node
+
+    A node is any item in the DOM tree, such as an element, text, or comment.
+
+    window is the top-level browser object. It provides access to browser features.
+    console.log(window)
+
+    document represents the current webpage and is available through window.document.
+    console.log(window.document)
+    console.log(document)
+    console.log(document.baseURI) // This gives you the URL of the webpage.
+    console.log(document.links) // This provides a collection of links on the page.
+    console.log(document.links[2])
+
+    DOM manipulation:
+    The following example selects and changes the element with the firstHeading ID:
+    document.getElementById("firstHeading") // Selects the element with this ID.
+
+    document.getElementById("firstHeading").innerHTML = "<h1>Abdul Ahad</h1>"
+
+    getElementById is a method that selects an element by its ID.
+    For classes, use getElementsByClassName.
+    innerHTML lets you read or replace the HTML inside an element.
+
+    Note:
+    firstHeading is the ID of Wikipedia's main page heading.
+    This example works in Wikipedia's browser console, not in this local file,
+    because this file does not contain an element with id="firstHeading".
+ -->
