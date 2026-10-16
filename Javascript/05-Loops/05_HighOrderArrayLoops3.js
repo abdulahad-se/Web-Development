@@ -1,9 +1,10 @@
 // for each :The forEach() method of Array instances executes a provided function once for each array element.
 /*
 syntax :
-
+array.forEach((element, index, array) => {
+    // code to execute for each element
+});
 */
-
 
 const coding=["python","ruby","javascript","java","rust","assembly"]
 // so question may arise that why we dont have the name of the function so answer is it callback function which has no name and the code we pass is just the variable like we do i or val etc before .
