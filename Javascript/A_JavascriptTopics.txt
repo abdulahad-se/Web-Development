@@ -266,3 +266,17 @@ JavaScript Topics
     - Changing an element's content with innerHTML.
     - Using the browser console to inspect and manipulate a live webpage.
     - Understanding that firstHeading refers to Wikipedia's page-heading ID.
+
+31-DOM Selectors, NodeList, and HTMLCollection (sourcefile: 06_DOM/02_AllDomSelectorNodeListAndHtmlCollection.html)
+    - Reading and updating element attributes with id, className, getAttribute(), and setAttribute().
+    - Styling selected elements through the style property.
+    - Comparing textContent, innerText, and innerHTML.
+    - Selecting the first matching element with querySelector().
+    - Using CSS selectors with querySelector(), including IDs, classes, attributes, pseudo-classes, and nested selectors.
+    - Selecting all matching elements with querySelectorAll().
+    - Understanding that a NodeList is array-like but is not an Array.
+    - Accessing NodeList items by index and iterating over them with forEach().
+    - Understanding that querySelectorAll() returns a NodeList even when only one element matches.
+    - Selecting elements by class with getElementsByClassName().
+    - Understanding that getElementsByClassName() returns an HTMLCollection.
+    - Converting an HTMLCollection to an Array with Array.from() before using Array methods such as forEach().
