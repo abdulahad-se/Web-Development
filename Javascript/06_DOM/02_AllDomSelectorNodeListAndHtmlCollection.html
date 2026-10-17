@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Selectors-NodeList-HtmlCollection learning</title>
+    <style>
+        body{
+            background-color:rgb(43, 39, 39);
+            color: white;
+        
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="heading1" class="learningSelectors">Dom Learning hope for the best</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</h1>
+        <h2>The is heading 2</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, rem!</p>
+        <p>Testing</p>
+        <input type="password" name="password" id="password">
+        <ul>
+            <li class="numbers">one</li>
+            <li class="numbers">two</li>
+            <li class="numbers">three</li>
+            <li class="numbers">four</li>
+            <li class="numbers">five</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<!--
+    Output: the <h1> element with id="heading1".
+    document.getElementById("heading1")
+
+    Output: "heading1".
+    document.getElementById("heading1").id
+
+    Output: undefined; class is not the standard property for reading classes.
+    document.getElementById("heading1").class
+
+    Output: "learningSelectors".
+    document.getElementById("heading1").className
+
+    Output: "learningSelectors".
+    document.getElementById("heading1").getAttribute("class")
+
+    Output: "heading1".
+    document.getElementById("heading1").getAttribute("id")
+
+    Output: ReferenceError because getElemetById is misspelled; the correct method is getElementById.
+    document.getElemetById("heading1").setAttribute("class","test")// it'll output is undefined on borwser but when you'll check in browser there the class is change to new one there 
+
+    Output: undefined; the class attribute changes to "test demo".
+    document.getElementById('heading1').setAttribute("class","test demo")
+
+    Output: the <h1> element is stored in title.
+    const title=document.getElementById("heading1") // store in the title variable and you can now directly use it to manipulate.
+
+    Output: undefined; the heading background becomes red.
+    title.style.backgroundColor = "red"
+
+    Output: undefined; the heading gets 23px of padding.
+    title.style.padding = "23px"
+
+    Output: undefined; the heading gets rounded corners.
+    title.style.borderRadius = "15px"
+
+    Output: the textContent value, including text inside hidden elements.
+    title.textContent
+
+    Output: the rendered text, excluding text hidden with CSS such as display:none.
+    title.innerText
+    The difference is that a hidden span is included by textContent but excluded by innerText. For example:
+    <h1>hi i am good <span style="display:none">Understanding</span>
+    Output of textContent: hi i am good Understanding
+    Output of innerText: hi i am good
+
+    Output: undefined because the correct property name is innerHTML.
+    title.innerHtml
+
+    innerHTML supports HTML markup. textContent and innerText return text, not HTML elements.
+    Output of innerHTML: hi i am good <span style="display:none">Understanding</span>
+
+******************* querySelector ****************
+
+     Output: the first <h1> element: "Dom Learning hope for the best".
+     document.querySelector('h1') => if we have multiple h1 then it give us the first one
+
+     Output: the <h1> element whose id is "heading1". querySelector accepts CSS selectors.
+     document.querySelector("#heading1") => we are selecting id the interesting thing about querySelector is that in it we can select the element just like we do in css 
+
+     Output: the <h1> element with class "learningSelectors".
+     document.querySelector(".learningSelectors")
+
+     Output: SyntaxError because the quotation marks conflict. In runnable code use document.querySelector('input[type="password"]').
+     document.querySelector("input[type="password"]")
+
+     Output: null because no <p> is the first child of its parent in this document. Use p:first-of-type to select the first paragraph.
+     document.querySelector("p:first-child")
+
+     Output: the <ul> element.
+     document.querySelector("ul")
+
+     Output: the <ul> element is stored in myUl.
+     const myUl=document.querySelector("ul")
+
+     Output: the first <li> inside myUl.
+     myUl.querySelector("li")
+     
+     Output: the first list item is stored in turnGreen.
+     const turnGreen=myUl.querySelector("li")
+
+     Output: undefined; the first list item gets a green background.
+     turnGreen.style.backgroundColor = "green"
+
+     Output: undefined; the first list item gets 2px of padding.
+     turnGreen.style.padding="2px"
+
+     Output: "one".
+     turnGreen.innerText
+
+     Output: undefined; the first list item's text changes to "hundred".
+     turnGreen.innerText = "hundred"
+
+******************* querySelectorAll **********
+    Output: NodeList(5) containing the five <li> elements. A NodeList is array-like, but it is not an Array.
+    document.querySelectorAll('li') // nodeList(3) [li,li,li] but remember one thing that nodelist is different from the actual array although it seems safe and similar but it different if you want to clarify it
+    check prototype of it onto browser
+
+    Output: SyntaxError because the => undefined text is not valid in this declaration. If that text is removed, the result is a NodeList containing the five <li> elements.
+    const temLiList = document.querySelectorAll('li') => undefined
+
+    Output: ReferenceError because temliList has different capitalization from temLiList. Even with the correct variable name, a NodeList does not have a style property.
+    temliList.style.backgroundColor = "red" // error bcz its nodelist
+
+    Output: ReferenceError for the same capitalization error. With temLiList[0], the first list item gets a red background and the result is undefined.
+    temliList[0].style.background = "red" // now it'll apply bcz as we say the node list is different from the array but it have some similarity one of them is that the nodelist start from the index 0
+
+    Output: NodeList(1) containing the <h2> element.
+    const myH2=document.querySelectorAll("h2")
+
+    Output: TypeError because the NodeList itself does not have a style property.
+    myH2.style.color = 'red' // error bcz even though we have only one but we still have to use index like previous bcz the querySelectorAll return the nodelist 
+
+    Output: undefined; the <h2> text becomes black.
+    myH2[0].style.color="black"
+
+    To change every matching element, use forEach(). NodeList provides forEach() in modern browsers.
+    Output: a NodeList containing the five <li> elements.
+    const temp=document.querySelectorAll("li")
+
+    Output: undefined; every list item gets a yellow background.
+    temp.forEach(function (list) {
+    list.style.backgroundColor = 'yellow'
+    })
+
+
+    Output: TypeError because the correct method is getElementsByClassName (with "Elements").
+    document.getElementByClassName("numbers") => HTML Collection(5) [li.numbers,li.numbers,li.numbers,li.numbers,li.numbers]
+
+    Output: TypeError for the same misspelled method.
+    const storeVal=document.getElementByClassName("numbers")
+
+    Output: TypeError because an HTMLCollection does not have forEach().
+    storeVal.forEach(function(li){
+        console.log(li) // error bcz html collection we dont have foreach so to traverse etc we convert the html collection into an array
+    })
+    
+    Output: a new Array containing the five list elements, provided storeVal is a valid HTMLCollection from getElementsByClassName.
+    Array.from(storeVal) // it give array of list
+
+    Output: TypeError because the previous line still uses the misspelled method. After using getElementsByClassName and Array.from(), forEach() can be used.
+    const convertedAnArray=document.getElementByClassName("numbers")
+
+    Output: no output because the previous line throws an error; with a corrected array, each list item would get a purple background.
+    convertedAnArray.forEach( (list) => {
+        list.style.backgroundColor= 'purple' // output on browser show undefined but in real like on browser the purple is implement to make it done you have to copy paste that thing into your main file which we know already
+    })
+
+ -->
